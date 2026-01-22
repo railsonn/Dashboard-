@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root to: "home#index"
+
   resources :monthly_summaries
   resources :budgets
   resources :payments
@@ -7,6 +10,7 @@ Rails.application.routes.draw do
   resources :transactions
   resources :accounts
   resources :users
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

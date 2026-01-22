@@ -25,6 +25,11 @@ gem "groupdate"
 gem "kaminari"
 gem "money-rails"
 
+
+# Bootstrap CSS framework
+gem "bootstrap", "~> 5.3"
+gem "sassc-rails"
+
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
