@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @monthly_summary %>
+
+<div>
+  <%= link_to "Edit this monthly summary", edit_monthly_summary_path(@monthly_summary) %> |
+  <%= link_to "Back to monthly summaries", monthly_summaries_path %>
+
+  <%= button_to "Destroy this monthly summary", @monthly_summary, method: :delete %>
+</div>

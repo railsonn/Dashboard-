@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Monthly summaries" %>
+
+<h1>Monthly summaries</h1>
+
+<div id="monthly_summaries">
+  <% @monthly_summaries.each do |monthly_summary| %>
+    <%= render monthly_summary %>
+    <p>
+      <%= link_to "Show this monthly summary", monthly_summary %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New monthly summary", new_monthly_summary_path %>

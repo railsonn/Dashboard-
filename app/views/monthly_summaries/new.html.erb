@@ -1,0 +1,11 @@
+<% content_for :title, "New monthly summary" %>
+
+<h1>New monthly summary</h1>
+
+<%= render "form", monthly_summary: @monthly_summary %>
+
+<br>
+
+<div>
+  <%= link_to "Back to monthly summaries", monthly_summaries_path %>
+</div>
