@@ -1,0 +1,19 @@
+current directory: /home/railson/project/ruby/projetos_pessoais/Dashboard/vendor/bundle/ruby/3.2.0/gems/debug-1.11.1/ext/debug
+/usr/bin/ruby3.2 -I/usr/lib/ruby/vendor_ruby extconf.rb
+creating Makefile
+
+current directory: /home/railson/project/ruby/projetos_pessoais/Dashboard/vendor/bundle/ruby/3.2.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260122-9999-eoewsk sitelibdir\=./.gem.20260122-9999-eoewsk clean
+
+current directory: /home/railson/project/ruby/projetos_pessoais/Dashboard/vendor/bundle/ruby/3.2.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260122-9999-eoewsk sitelibdir\=./.gem.20260122-9999-eoewsk
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/railson/project/ruby/projetos_pessoais/Dashboard/vendor/bundle/ruby/3.2.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260122-9999-eoewsk sitelibdir\=./.gem.20260122-9999-eoewsk install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20260122-9999-eoewsk/debug
+
+current directory: /home/railson/project/ruby/projetos_pessoais/Dashboard/vendor/bundle/ruby/3.2.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260122-9999-eoewsk sitelibdir\=./.gem.20260122-9999-eoewsk clean

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  accountType: MyString
+  name: MyString
+  balance: 1
+  user: one
+
+two:
+  accountType: MyString
+  name: MyString
+  balance: 1
+  user: two
