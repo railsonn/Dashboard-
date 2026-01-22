@@ -1,15 +1,13 @@
 <!-- Nabar primary -->
 
-<div class="container-fluid py-4">
+<div class="container-fluid ">
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Dashboard</a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-              aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Title do navbar primary -->
+      <div>
+        <a class="navbar-brand" href="#">Dashboard</a>
+      </div>
 
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <!-- ms-auto empurra para a direita -->
@@ -41,50 +39,42 @@
 
 <!-- Nav secundary vertical mais o conteudo ao lado -->
 <div class="d-flex">
-<nav class="navbar flex-column vh-100 p-3 sidebar" style="width: 240px;" id="sidebarMenu">
-  <div class="navbar-nav d-flex h-100">
+  <nav class="navbar flex-column vh-100 p-3 sidebar" style="width: 240px;" id="sidebarMenu">
+    <div class="navbar-nav d-flex h-100 w-100">
+      <div class="d-flex flex-column gap-3">
+        <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <i class="bi bi-speedometer2"></i>
+          Dashboard
+        </a>
 
-    <div class="d-flex flex-column gap-3">
-      <a class="nav-link d-flex align-items-center gap-2" href="#">
-        <i class="bi bi-speedometer2"></i>
-        Dashboard
-      </a>
+        <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <i class="bi bi-wallet2"></i>
+          Accounts
+        </a>
 
-      <a class="nav-link d-flex align-items-center gap-2" href="#">
-        <i class="bi bi-house"></i>
-        Overview
-      </a>
+        <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <i class="bi bi-arrow-left-right"></i>
+          Transactions
+        </a>
 
-      <a class="nav-link d-flex align-items-center gap-2" href="#">
-        <i class="bi bi-calendar-month"></i>
-        Monthly
-      </a>
+        <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <i class="bi bi-pie-chart"></i>
+          Budgets
+        </a>
 
-      <a class="nav-link d-flex align-items-center gap-2" href="#">
-        <i class="bi bi-calendar-range"></i>
-        Annually
-      </a>
-
-      <a class="nav-link d-flex align-items-center gap-2" href="#">
-        <i class="bi bi-download"></i>
-        Export
-      </a>
+        <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <i class="bi bi-receipt"></i>
+          Invoices
+        </a>
+      </div>
     </div>
-
-  </div>
-</nav>
+  </nav>
 
 
 
 
   <!-- Conteúdo principal -->
   <main class="flex-fill p-4">
-    <button class="btn btn-success mt-3">
-      Botão Bootstrap
-    </button>
-
-      <div class="container-fluid py-4">
-
       <!-- CARDS DO TOPO -->
       <div class="row g-3 mb-4">
         <div class="col-md-3">
