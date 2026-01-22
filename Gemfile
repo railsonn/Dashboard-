@@ -17,6 +17,14 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# dependencias necessarias para o projeto
+gem "devise"
+gem "pundit"
+gem "chartkick"
+gem "groupdate"
+gem "kaminari"
+gem "money-rails"
+
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
