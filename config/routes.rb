@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :budgets
+  resources :payments
+  resources :invoices
+  resources :categories
   resources :transactions
   resources :accounts
   resources :users
