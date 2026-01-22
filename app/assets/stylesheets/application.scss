@@ -11,3 +11,17 @@
 
 @import "bootstrap";
 
+#sidebarMenu {
+  background-color: #0d1b2a; /* azul escuro */
+}
+
+.sidebar .nav-link {
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #4dabf7; /* azul claro */
+  color: #0d1b2a;
+}

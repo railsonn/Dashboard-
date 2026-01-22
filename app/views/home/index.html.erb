@@ -1,82 +1,130 @@
 <!-- Nabar primary -->
 
 <div class="container-fluid py-4">
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Dashboard</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Settings
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-      </ul>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Dashboard</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <!-- ms-auto empurra para a direita -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              Settings
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Admin</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
+</div>
+
+<!-- Nav secundary vertical mais o conteudo ao lado -->
+<div class="d-flex">
+<nav class="navbar flex-column vh-100 p-3 sidebar" style="width: 240px;" id="sidebarMenu">
+  <div class="navbar-nav d-flex h-100">
+
+    <div class="d-flex flex-column gap-3">
+      <a class="nav-link d-flex align-items-center gap-2" href="#">
+        <i class="bi bi-speedometer2"></i>
+        Dashboard
+      </a>
+
+      <a class="nav-link d-flex align-items-center gap-2" href="#">
+        <i class="bi bi-house"></i>
+        Overview
+      </a>
+
+      <a class="nav-link d-flex align-items-center gap-2" href="#">
+        <i class="bi bi-calendar-month"></i>
+        Monthly
+      </a>
+
+      <a class="nav-link d-flex align-items-center gap-2" href="#">
+        <i class="bi bi-calendar-range"></i>
+        Annually
+      </a>
+
+      <a class="nav-link d-flex align-items-center gap-2" href="#">
+        <i class="bi bi-download"></i>
+        Export
+      </a>
+    </div>
+
   </div>
 </nav>
 
 
 
 
-<button class="btn btn-success mt-3">
-  Botão Bootstrap
-</button>
+  <!-- Conteúdo principal -->
+  <main class="flex-fill p-4">
+    <button class="btn btn-success mt-3">
+      Botão Bootstrap
+    </button>
 
-  <div class="container-fluid py-4">
+      <div class="container-fluid py-4">
 
-  <!-- CARDS DO TOPO -->
-  <div class="row g-3 mb-4">
-    <div class="col-md-3">
-      <div class="card shadow-sm text-center">
-        <div class="card-body">
-          <h6 class="text-muted">Total Balance</h6>
-          <h4 class="text-success fw-bold">R$ 2.750,00</h4>
+      <!-- CARDS DO TOPO -->
+      <div class="row g-3 mb-4">
+        <div class="col-md-3">
+          <div class="card shadow-sm text-center">
+            <div class="card-body">
+              <h6 class="text-muted">Total Balance</h6>
+              <h4 class="text-success fw-bold">R$ 2.750,00</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card shadow-sm text-center">
+            <div class="card-body">
+              <h6 class="text-muted">Income This Month</h6>
+              <h4 class="text-primary fw-bold">R$ 7.200,00</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card shadow-sm text-center">
+            <div class="card-body">
+              <h6 class="text-muted">Expenses This Month</h6>
+              <h4 class="text-danger fw-bold">R$ 5.400,00</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card shadow-sm text-center">
+            <div class="card-body">
+              <h6 class="text-muted">Open Invoices</h6>
+              <h4 class="text-warning fw-bold">R$ 1.400,00</h4>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+  </main>
+</div>
 
-    <div class="col-md-3">
-      <div class="card shadow-sm text-center">
-        <div class="card-body">
-          <h6 class="text-muted">Income This Month</h6>
-          <h4 class="text-primary fw-bold">R$ 7.200,00</h4>
-        </div>
-      </div>
-    </div>
 
-    <div class="col-md-3">
-      <div class="card shadow-sm text-center">
-        <div class="card-body">
-          <h6 class="text-muted">Expenses This Month</h6>
-          <h4 class="text-danger fw-bold">R$ 5.400,00</h4>
-        </div>
-      </div>
-    </div>
 
-    <div class="col-md-3">
-      <div class="card shadow-sm text-center">
-        <div class="card-body">
-          <h6 class="text-muted">Open Invoices</h6>
-          <h4 class="text-warning fw-bold">R$ 1.400,00</h4>
-        </div>
-      </div>
-    </div>
-  </div>
