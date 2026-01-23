@@ -116,7 +116,7 @@
 
     <div id="graficos">
       <!-- GRÁFICOS (SEM JAVASCRIPT) -->
-      <div class="row g-4">
+      <div class="row g-4 ">
         <!-- Gráfico de barras -->
         <div class="col-md-8">
           <div class="card shadow-sm">
@@ -125,7 +125,7 @@
 
               <p class="mb-1">Receitas</p>
               <div class="progress mb-3">
-                <div class="progress-bar bg-success" style="width: 75%">
+                <div class="progress-bar bg-primary" style="width: 75%">
                   R$ 7.200
                 </div>
               </div>
@@ -139,8 +139,15 @@
 
               <p class="mb-1">Saldo</p>
               <div class="progress">
-                <div class="progress-bar bg-primary" style="width: 35%">
+                <div class="progress-bar bg-success" style="width: 35%">
                   R$ 2.750
+                </div>
+              </div>
+
+              <p class="mb-1">Open Invoices</p>
+              <div class="progress mb-3">
+                <div class="progress-bar bg-warning" style="width: 20%">
+                  R$ 1.400
                 </div>
               </div>
             </div>
@@ -160,24 +167,30 @@
                     height: 140px;
                     border-radius: 50%;
                     background: conic-gradient(
-                      #198754 0% 45%,
-                      #dc3545 45% 80%,
-                      #0d6efd 80% 100%
+                      #198754 0% 40%,   /* Receitas */
+                      #dc3545 40% 70%, /* Despesas */
+                      #0d6efd 70% 85%, /* Saldo */
+                      #ffc107 85% 100% /* Open Invoices */
                     );
                   ">
               </div>
 
+
               <!-- Legenda -->
               <div class="text-start">
                 <p class="mb-1">
-                  <span class="badge bg-success me-2">&nbsp;</span> Receitas
+                  <span class="badge bg-primary me-2">&nbsp;</span> Receitas
                 </p>
                 <p class="mb-1">
                   <span class="badge bg-danger me-2">&nbsp;</span> Despesas
                 </p>
                 <p class="mb-0">
-                  <span class="badge bg-primary me-2">&nbsp;</span> Saldo
+                  <span class="badge bg-success me-2">&nbsp;</span> Saldo
                 </p>
+                <p class="mb-0">
+                  <span class="badge bg-warning me-2">&nbsp;</span> Open Invoices
+                </p>
+
               </div>
             </div>
           </div>
