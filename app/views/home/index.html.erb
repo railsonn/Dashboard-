@@ -161,10 +161,11 @@
               <h6 class="text-muted mb-3">Distribuição Financeira</h6>
 
               <!-- Círculo -->
-              <div class="mx-auto mb-3"
+              <!-- Círculo responsivo -->
+              <div class="mx-auto mb-3 d-flex justify-content-center align-items-center"
                   style="
-                    width: 140px;
-                    height: 140px;
+                    width: clamp(120px, 40vw, 160px);
+                    height: clamp(120px, 40vw, 160px);
                     border-radius: 50%;
                     background: conic-gradient(
                       #198754 0% 40%,   /* Receitas */
@@ -173,7 +174,18 @@
                       #ffc107 85% 100% /* Open Invoices */
                     );
                   ">
+
+                <!-- Círculo interno -->
+                <div
+                  style="
+                    width: clamp(55px, 18vw, 75px);
+                    height: clamp(55px, 18vw, 75px);
+                    border-radius: 50%;
+                    background-color: #ffffff;
+                  ">
+                </div>
               </div>
+
 
 
               <!-- Legenda -->
