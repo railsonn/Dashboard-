@@ -11,6 +11,17 @@
 
 @import "bootstrap";
 
+
+
+#navbarContainer {
+  background-color: #0d1b2a; /* azul escuro */
+}
+
+#mainNavbar {
+  width: 100%;
+  background-color: #0D6EFD; /* azul escuro */
+}
+
 #sidebarMenu {
   background-color: #0d1b2a; /* azul escuro */
 }
@@ -25,4 +36,9 @@
 .sidebar .nav-link:hover {
   background-color: #4dabf7; /* azul claro */
   color: #0d1b2a;
+}
+
+#graficos {
+  position: relative;
+  top: 70px;
 }

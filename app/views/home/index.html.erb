@@ -1,7 +1,7 @@
 <!-- Nabar primary -->
 
-<div class="container-fluid ">
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<div id="navbarContainer">
+  <nav class="navbar navbar-dark navbar-expand-lg" id="mainNavbar">
     <div class="container-fluid">
 
     <!-- Title do navbar primary -->
@@ -75,46 +75,119 @@
 
   <!-- Conteúdo principal -->
   <main class="flex-fill p-4">
-      <!-- CARDS DO TOPO -->
-      <div class="row g-3 mb-4">
-        <div class="col-md-3">
-          <div class="card shadow-sm text-center">
+    <!-- CARDS DO TOPO -->
+    <div class="row g-3 mb-4">
+      <div class="col-md-3">
+        <div class="card shadow-sm text-center">
+          <div class="card-body">
+            <h6 class="text-muted">Total Balance</h6>
+            <h4 class="text-success fw-bold">R$ 2.750,00</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card shadow-sm text-center">
+          <div class="card-body">
+            <h6 class="text-muted">Income This Month</h6>
+            <h4 class="text-primary fw-bold">R$ 7.200,00</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card shadow-sm text-center">
+          <div class="card-body">
+            <h6 class="text-muted">Expenses This Month</h6>
+            <h4 class="text-danger fw-bold">R$ 5.400,00</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card shadow-sm text-center">
+          <div class="card-body">
+            <h6 class="text-muted">Open Invoices</h6>
+            <h4 class="text-warning fw-bold">R$ 1.400,00</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="graficos">
+      <!-- GRÁFICOS (SEM JAVASCRIPT) -->
+      <div class="row g-4">
+        <!-- Gráfico de barras -->
+        <div class="col-md-8">
+          <div class="card shadow-sm">
             <div class="card-body">
-              <h6 class="text-muted">Total Balance</h6>
-              <h4 class="text-success fw-bold">R$ 2.750,00</h4>
+              <h6 class="text-muted mb-4">Receitas x Despesas</h6>
+
+              <p class="mb-1">Receitas</p>
+              <div class="progress mb-3">
+                <div class="progress-bar bg-success" style="width: 75%">
+                  R$ 7.200
+                </div>
+              </div>
+
+              <p class="mb-1">Despesas</p>
+              <div class="progress mb-3">
+                <div class="progress-bar bg-danger" style="width: 55%">
+                  R$ 5.400
+                </div>
+              </div>
+
+              <p class="mb-1">Saldo</p>
+              <div class="progress">
+                <div class="progress-bar bg-primary" style="width: 35%">
+                  R$ 2.750
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-3">
-          <div class="card shadow-sm text-center">
-            <div class="card-body">
-              <h6 class="text-muted">Income This Month</h6>
-              <h4 class="text-primary fw-bold">R$ 7.200,00</h4>
-            </div>
-          </div>
-        </div>
+          <!-- Gráfico pizza (simulado) -->
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+              <h6 class="text-muted mb-3">Distribuição Financeira</h6>
 
-        <div class="col-md-3">
-          <div class="card shadow-sm text-center">
-            <div class="card-body">
-              <h6 class="text-muted">Expenses This Month</h6>
-              <h4 class="text-danger fw-bold">R$ 5.400,00</h4>
-            </div>
-          </div>
-        </div>
+              <!-- Círculo -->
+              <div class="mx-auto mb-3"
+                  style="
+                    width: 140px;
+                    height: 140px;
+                    border-radius: 50%;
+                    background: conic-gradient(
+                      #198754 0% 45%,
+                      #dc3545 45% 80%,
+                      #0d6efd 80% 100%
+                    );
+                  ">
+              </div>
 
-        <div class="col-md-3">
-          <div class="card shadow-sm text-center">
-            <div class="card-body">
-              <h6 class="text-muted">Open Invoices</h6>
-              <h4 class="text-warning fw-bold">R$ 1.400,00</h4>
+              <!-- Legenda -->
+              <div class="text-start">
+                <p class="mb-1">
+                  <span class="badge bg-success me-2">&nbsp;</span> Receitas
+                </p>
+                <p class="mb-1">
+                  <span class="badge bg-danger me-2">&nbsp;</span> Despesas
+                </p>
+                <p class="mb-0">
+                  <span class="badge bg-primary me-2">&nbsp;</span> Saldo
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
   </main>
 </div>
+
+
 
 
 
