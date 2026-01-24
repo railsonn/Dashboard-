@@ -43,10 +43,10 @@
   <nav class="navbar flex-column vh-90 p-3 sidebar" style="width: 240px;" id="sidebarMenu">
     <div class="navbar-nav d-flex h-100 w-100">
       <div class="d-flex flex-column gap-3">
-        <a class="nav-link d-flex align-items-center gap-2" href="#">
+        <%= link_to root_path, class: "nav-link d-flex align-items-center gap-2" do %>
           <i class="bi bi-speedometer2"></i>
           Dashboard
-        </a>
+        <% end %>
 
         <%= link_to accounts_path, class: "nav-link d-flex align-items-center gap-2" do %>
           <i class="bi bi-arrow-left-right"></i>
