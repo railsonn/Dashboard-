@@ -1,3 +1,81 @@
+<!-- Nabar primary -->
+
+<div id="navbarContainer">
+  <nav class="navbar navbar-dark navbar-expand-lg" id="mainNavbar">
+    <div class="container-fluid">
+
+    <!-- Title do navbar primary -->
+      <div>
+        <a class="navbar-brand" href="#">Dashboard</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <!-- ms-auto empurra para a direita -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              Settings
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Admin</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<!-- Nav secundary vertical mais o conteudo ao lado -->
+<div class="d-flex">
+  <nav class="navbar flex-column vh-90 p-3 sidebar" style="width: 240px;" id="sidebarMenu">
+    <div class="navbar-nav d-flex h-100 w-100">
+      <div class="d-flex flex-column gap-3">
+        <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <i class="bi bi-speedometer2"></i>
+          Dashboard
+        </a>
+
+        <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <i class="bi bi-wallet2"></i>
+          Accounts
+        </a>
+
+        <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <i class="bi bi-arrow-left-right"></i>
+          Transactions
+        </a>
+
+        <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <i class="bi bi-pie-chart"></i>
+          Budgets
+        </a>
+
+        <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <i class="bi bi-receipt"></i>
+          Invoices
+        </a>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
 <p style="color: green"><%= notice %></p>
 
 <% content_for :title, "Accounts" %>
