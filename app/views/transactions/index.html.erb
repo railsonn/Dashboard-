@@ -42,30 +42,31 @@
   <nav class="navbar flex-column vh-90 p-3 sidebar" style="width: 240px;" id="sidebarMenu">
     <div class="navbar-nav d-flex h-100 w-100">
       <div class="d-flex flex-column gap-3">
-        <a class="nav-link d-flex align-items-center gap-2" href="#">
+        <%= link_to root_path, class: "nav-link d-flex align-items-center gap-2" do %>
           <i class="bi bi-speedometer2"></i>
           Dashboard
-        </a>
+        <% end %>
 
-        <a class="nav-link d-flex align-items-center gap-2" href="#">
-          <i class="bi bi-wallet2"></i>
+        <%= link_to accounts_path, class: "nav-link d-flex align-items-center gap-2" do %>
+          <i class="bi bi-arrow-left-right"></i>
           Accounts
-        </a>
+        <% end %>
 
-        <a class="nav-link d-flex align-items-center gap-2" href="#">
+        <%= link_to transactions_path, class: "nav-link d-flex align-items-center gap-2" do %>
           <i class="bi bi-arrow-left-right"></i>
           Transactions
-        </a>
+        <% end %>
 
-        <a class="nav-link d-flex align-items-center gap-2" href="#">
+
+        <%= link_to budgets_path, class: "nav-link d-flex align-items-center gap-2" do %>
           <i class="bi bi-pie-chart"></i>
           Budgets
-        </a>
+        <% end %>
 
-        <a class="nav-link d-flex align-items-center gap-2" href="#">
+        <%= link_to budgets_path, class: "nav-link d-flex align-items-center gap-2" do %>
           <i class="bi bi-receipt"></i>
           Invoices
-        </a>
+        <% end %>
       </div>
     </div>
   </nav>
