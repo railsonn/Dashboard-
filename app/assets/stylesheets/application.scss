@@ -45,6 +45,12 @@
   color: #0d1b2a;
 }
 
+.nav-link.active {
+  background-color: #4dabf7; 
+  color: #fff;
+  border-radius: 8px;
+}
+
 #graficos {
   position: relative;
   top: 70px;
