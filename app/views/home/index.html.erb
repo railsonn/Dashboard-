@@ -154,38 +154,74 @@
             </div>
           </div>
         </div>
+<!-- Gráfico pizza (simulado) -->
+<div class="col-md-4">
+  <div class="card shadow-sm">
+    <div class="card-body text-center">
+      <h6 class="text-muted mb-3">Distribuição Financeira</h6>
 
-          <!-- Gráfico pizza (simulado) -->
-        <div class="col-md-4">
-          <div class="card shadow-sm">
-            <div class="card-body text-center">
-              <h6 class="text-muted mb-3">Distribuição Financeira</h6>
+      <!-- Círculo -->
+      <div class="position-relative mx-auto mb-3 d-flex justify-content-center align-items-center"
+           style="
+             width: clamp(140px, 40vw, 180px);
+             height: clamp(140px, 40vw, 180px);
+             border-radius: 50%;
+             background: conic-gradient(
+               #198754 0% 40%,    /* Receitas */
+               #dc3545 40% 70%,  /* Despesas */
+               #0d6efd 70% 85%,  /* Saldo */
+               #ffc107 85% 100% /* Open Invoices */
+             );
+             box-shadow: 0 6px 18px rgba(0,0,0,.15);
+           ">
 
-              <!-- Círculo -->
-              <!-- Círculo responsivo -->
-              <div class="mx-auto mb-3 d-flex justify-content-center align-items-center"
-                  style="
-                    width: clamp(120px, 40vw, 160px);
-                    height: clamp(120px, 40vw, 160px);
-                    border-radius: 50%;
-                    background: conic-gradient(
-                      #198754 0% 40%,   /* Receitas */
-                      #dc3545 40% 70%, /* Despesas */
-                      #0d6efd 70% 85%, /* Saldo */
-                      #ffc107 85% 100% /* Open Invoices */
-                    );
-                  ">
+        <!-- Labels no gráfico -->
+        <span class="position-absolute text-white fw-semibold"
+              style="top: 12%; left: 55%; font-size: .7rem;">
+          Receitas<br>40%
+        </span>
 
-                <!-- Círculo interno -->
-                <div
-                  style="
-                    width: clamp(55px, 18vw, 75px);
-                    height: clamp(55px, 18vw, 75px);
-                    border-radius: 50%;
-                    background-color: #ffffff;
-                  ">
-                </div>
-              </div>
+        <span class="position-absolute text-white fw-semibold"
+              style="top: 55%; left: 68%; font-size: .7rem;">
+          Despesas<br>30%
+        </span>
+
+        <span class="position-absolute text-white fw-semibold"
+              style="top: 72%; left: 25%; font-size: .7rem;">
+          Saldo<br>15%
+        </span>
+
+        <span class="position-absolute text-dark fw-semibold"
+              style="top: 30%; left: 8%; font-size: .7rem;">
+          Open<br>15%
+        </span>
+
+        <!-- Círculo interno -->
+        <div class="d-flex flex-column justify-content-center align-items-center"
+             style="
+               width: clamp(65px, 18vw, 85px);
+               height: clamp(65px, 18vw, 85px);
+               border-radius: 50%;
+               background-color: #ffffff;
+               box-shadow: inset 0 0 6px rgba(0,0,0,.15);
+             ">
+          <small class="text-muted">Total</small>
+          <strong class="text-dark">100%</strong>
+        </div>
+      </div>
+
+      <!-- Legenda opcional -->
+      <div class="d-flex flex-wrap justify-content-center gap-2 small">
+        <span class="badge bg-success">Receitas</span>
+        <span class="badge bg-danger">Despesas</span>
+        <span class="badge bg-primary">Saldo</span>
+        <span class="badge bg-warning text-dark">Open</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 
 
 
