@@ -24,6 +24,7 @@ gem "chartkick"
 gem "groupdate"
 gem "kaminari"
 gem "money-rails"
+gem "faker"
 
 
 # Bootstrap CSS framework
