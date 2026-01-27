@@ -30,7 +30,7 @@
 
 
 #sidebarMenu {
-  background-color: #0d1b2a; /* azul escuro */
+  background-color: #161B2E; /* azul escuro */
 }
 
 .sidebar .nav-link {
@@ -51,11 +51,23 @@
   border-radius: 8px;
 }
 
+
+
+// Main Content
+
+#mainContent {
+  background-color: #111525; /* azul bem escuro */
+  color: #ffffff;
+}
+
+.card-container {
+  background-color: #161B2E;
+}
+
+
 #graficos {
   position: relative;
   top: 70px;
 }
 
 
-
-// 0D6EFD
