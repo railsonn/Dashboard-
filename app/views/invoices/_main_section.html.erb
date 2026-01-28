@@ -1,0 +1,55 @@
+<main id="mainContent" class="p-4 flex-grow-1">
+  <div class="table-responsive">
+    <table class="table table-dark table-striped table-hover align-middle mb-0">
+      <thead class="text-uppercase small">
+        <tr>
+          <th>ID</th>
+          <th>Status</th>
+          <th>Due date</th>
+          <th>Total amount</th>
+          <th class="text-center">Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+      <% invoices.each do |invoice| %>
+        <tr>
+          <td class="fw-medium">
+            <%= invoice.id %>
+          </td>
+
+          <td>
+            <span class="badge <%= invoice.status == 'paid' ? 'bg-success' : invoice.status == 'pending' ? 'bg-warning' : 'bg-danger' %> text-uppercase small">
+              <%= invoice.status %>
+            </span>
+          </td>
+
+          <td class="fw-medium">
+            <%= invoice.due_date %>
+          </td>
+
+          <td class="fw-bold">
+            <%= number_to_currency(invoice.total_amount) %>
+          </td>
+
+          <td class="text-center d-flex gap-2 justify-content-center">
+            <%= link_to 'View',
+              invoice_path(invoice),
+              class: "btn btn-sm btn-outline-primary fw-semibold" %>
+
+            <%= link_to 'Edit',
+              edit_invoice_path(invoice),
+              class: "btn btn-sm btn-outline-warning fw-semibold" %>
+
+            <%= link_to 'Delete',
+              invoice_path(invoice),
+              method: :delete,
+              data: { confirm: 'Are you sure?' },
+              class: "btn btn-sm btn-outline-danger fw-semibold" %>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</main>
