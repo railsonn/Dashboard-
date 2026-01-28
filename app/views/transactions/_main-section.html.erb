@@ -34,6 +34,23 @@
                 <%= transaction.transaction_type %>
               </span>
             </td>
+
+          
+            <td class="text-center d-flex gap-2 justify-content-center">
+              <%= link_to 'View',
+                transaction_path(transaction),
+                class: "btn btn-sm btn-outline-primary fw-semibold" %>
+
+              <%= link_to 'Edit',
+                edit_transaction_path(transaction),
+                class: "btn btn-sm btn-outline-warning fw-semibold" %>
+
+              <%= link_to 'Delete',
+                transaction_path(transaction),
+                method: :delete,
+                data: { confirm: 'Are you sure?' },
+                class: "btn btn-sm btn-outline-danger fw-semibold" %>
+            </td>
           </tr>
         <% end %>
       </tbody>
