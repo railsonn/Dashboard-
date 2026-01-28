@@ -71,7 +71,7 @@
     </div>
   </nav>
 
-  <main class="p-4 flex-grow-1">
+  <main class="p-4 flex-grow-1" id="mainContent">
 
     <% if notice.present? %>
       <div class="alert alert-success">
@@ -80,8 +80,8 @@
     <% end %>
 
     <div class="table-responsive">
-      <table class="table table-striped table-hover align-middle">
-        <thead class="table-dark">
+      <table class="table">
+        <thead>
           <tr>
             <th>ID</th>
             <th>Account Name</th>
