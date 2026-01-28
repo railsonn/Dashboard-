@@ -12,9 +12,9 @@ require 'faker'
 
 puts "Criando accounts..."
 
-# User.create!(
-#   email: 'user@example.com',
-#   name: 'Usuário Exemplo')
+User.create!(
+  email: 'user@example.com',
+  name: 'Usuário Exemplo')
 
 30.times do
   Account.create!(
@@ -25,4 +25,24 @@ puts "Criando accounts..."
   )
 end
 
-puts "Accounts criadas com sucesso!"
+30.times do 
+  Transaction.create!(
+    transaction_type: ['DEBIT', 'CREDIT'].sample,
+    amount: Faker::Number.decimal(l_digits: 3, r_digits: 2),
+    description: [
+      "Compra no cartão de crédito",
+      "Transferência recebida",
+      "Transferência enviada",
+      "Pix recebido",
+      "Pix enviado",
+      "Saque em caixa eletrônico",
+      "Depósito em dinheiro",
+      "Pagamento de boleto",
+      "Assinatura mensal"
+    ].sample,
+    transaction_date: Faker::Date.backward(days: 365),
+    user: User.all.sample,
+    account: Account.all.sample
+  )
+end
+puts "Transactions, accounts e user criadas com sucesso!"
