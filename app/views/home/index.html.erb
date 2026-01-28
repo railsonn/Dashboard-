@@ -154,97 +154,91 @@
             </div>
           </div>
         </div>
-<!-- Gráfico pizza (simulado) -->
-<div class="col-md-4">
-  <div class="card shadow-sm">
-    <div class="card-body text-center">
-      <h6 class="mb-3">Distribuição Financeira</h6>
-
-      <!-- Círculo -->
-      <div class="position-relative mx-auto mb-3 d-flex justify-content-center align-items-center"
-           style="
-             width: clamp(140px, 40vw, 180px);
-             height: clamp(140px, 40vw, 180px);
-             border-radius: 50%;
-             background: conic-gradient(
-               #0d6efd 0% 42.98%,    /* Receitas */
-               #dc3545 42.98% 75.21%,  /* Despesas */
-               #198754 75.21% 91.62%,  /* Saldo */
-               #ffc107 91.62% 100% /* Open Invoices */
-             );
-             box-shadow: 0 6px 18px rgba(0,0,0,.15);
-           ">
-
-        <!-- Labels no gráfico -->
-        <span class="position-absolute text-white fw-semibold"
-              style="top: 40%; left: 74.5%; font-size: .7rem;">
-          Receitas<br>42%
-        </span>
-
-        <span class="position-absolute text-white fw-semibold"
-              style="top: 71.5%; left: 18%; font-size: .7rem;">
-          Despesas<br>30%
-        </span>
-
-        <span class="position-absolute text-white fw-semibold"
-              style="top: 5%; left: 33%; font-size: .7rem;">
-          Open<br>15%
-        </span>
-
-        <span class="position-absolute text-dark fw-semibold"
-              style="top: 25%; left: 12%; font-size: .7rem;">
-          Saldo<br>15%
-        </span>
-
-        <!-- Círculo interno -->
-        <div class="d-flex flex-column justify-content-center align-items-center"
-             style="
-               width: clamp(65px, 18vw, 85px);
-               height: clamp(65px, 18vw, 85px);
-               border-radius: 50%;
-               background-color: #111525;
-               box-shadow: inset 0 0 6px rgba(0,0,0,.15);
-             ">
-          <small>Total</small>
-          <strong>100%</strong>
-        </div>
-      </div>
-
-      <!-- Legenda opcional -->
-      <div class="d-flex flex-wrap justify-content-center gap-2 small">
-        <span class="badge bg-primary">Receitas</span>
-        <span class="badge bg-danger">Despesas</span>
-        <span class="badge bg-success">Saldo</span>
-        <span class="badge bg-warning text-dark">Open</span>
-      </div>
-
-    </div>
-  </div>
-</div>
 
 
+    <!-- Gráfico pizza (simulado) -->
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <div class="card-body text-center">
+          <h6 class="mb-3">Distribuição Financeira</h6>
 
+          <!-- Círculo -->
+          <div class="position-relative mx-auto mb-3 d-flex justify-content-center align-items-center"
+              style="
+                width: clamp(140px, 40vw, 180px);
+                height: clamp(140px, 40vw, 180px);
+                border-radius: 50%;
+                background: conic-gradient(
+                  #005eff 0% 42.98%,      /* Receitas – azul mais vivo */
+                  #ff1e3c 42.98% 75.21%,  /* Despesas – vermelho mais intenso */
+                  #00c26e 75.21% 91.62%,  /* Saldo – verde mais vibrante */
+                  #ffcd1a 91.62% 100%    /* Open Invoices – amarelo mais vivo */
+                );
+                box-shadow: 0 6px 18px rgba(0,0,0,.15);
+              ">
 
-              <!-- Legenda -->
-              <div class="text-start">
-                <p class="mb-1">
-                  <span class="badge bg-primary me-2">&nbsp;</span> Receitas
-                </p>
-                <p class="mb-1">
-                  <span class="badge bg-danger me-2">&nbsp;</span> Despesas
-                </p>
-                <p class="mb-0">
-                  <span class="badge bg-success me-2">&nbsp;</span> Saldo
-                </p>
-                <p class="mb-0">
-                  <span class="badge bg-warning me-2">&nbsp;</span> Open Invoices
-                </p>
+            <!-- Labels no gráfico -->
+            <span class="position-absolute text-white fw-semibold"
+                  style="top: 40%; left: 74.5%; font-size: .7rem;">
+              Receitas<br>42%
+            </span>
 
-              </div>
+            <span class="position-absolute text-white fw-semibold"
+                  style="top: 71.5%; left: 18%; font-size: .7rem;">
+              Despesas<br>30%
+            </span>
+
+            <span class="position-absolute text-dark fw-semibold"
+                  style="top: 5%; left: 33%; font-size: .7rem;">
+              Open<br>15%
+            </span>
+
+            <span class="position-absolute text-white fw-semibold"
+                  style="top: 25%; left: 12%; font-size: .7rem;">
+              Saldo<br>15%
+            </span>
+
+            <!-- Círculo interno -->
+            <div class="d-flex flex-column justify-content-center align-items-center"
+                style="
+                  width: clamp(65px, 18vw, 85px);
+                  height: clamp(65px, 18vw, 85px);
+                  border-radius: 50%;
+                  background-color: #111525;
+                  box-shadow: inset 0 0 6px rgba(0,0,0,.15);
+                ">
+              <small>Total</small>
+              <strong>100%</strong>
             </div>
           </div>
+
+          <!-- Legenda opcional -->
+          <div class="d-flex flex-wrap justify-content-center gap-2 small">
+            <span class="badge bg-primary">Receitas</span>
+            <span class="badge bg-danger">Despesas</span>
+            <span class="badge bg-success">Saldo</span>
+            <span class="badge bg-warning text-dark">Open</span>
+          </div>
+
         </div>
       </div>
+    </div>
+
+  <!-- Fim gráficos -->
+  <!-- Legenda -->
+    <div class="text-start">
+      <p class="mb-1">
+        <span class="badge bg-primary me-2">&nbsp;</span> Receitas
+      </p>
+      <p class="mb-1">
+        <span class="badge bg-danger me-2">&nbsp;</span> Despesas
+      </p>
+      <p class="mb-0">
+        <span class="badge bg-success me-2">&nbsp;</span> Saldo
+      </p>
+      <p class="mb-0">
+        <span class="badge bg-warning me-2">&nbsp;</span> Open Invoices
+      </p>
     </div>
   </main>
 </div>
