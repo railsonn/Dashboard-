@@ -47,13 +47,13 @@ puts "Criando accounts..."
 # end
 
 
-5.times do
+25.times do
   Budget.create!(
     limit_amount: Faker::Number.decimal(l_digits: 4, r_digits: 2),
     month: Faker::Date.backward(days: 365).strftime("%B"),
     year: Faker::Date.backward(days: 365).strftime("%Y"),
     user: User.all.sample,
-    categories_id: Category.first
+    category: Category.first
   )
 end
 puts "Budgets criadas com sucesso!"

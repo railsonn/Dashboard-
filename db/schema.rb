@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_01_28_142512) do
+ActiveRecord::Schema[8.0].define(version: 2026_01_28_185153) do
   create_table "accounts", force: :cascade do |t|
     t.string "accountType"
     t.string "name"
@@ -23,13 +23,13 @@ ActiveRecord::Schema[8.0].define(version: 2026_01_28_142512) do
 
   create_table "budgets", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.integer "categories_id", null: false
     t.decimal "limit_amount"
     t.string "month"
     t.string "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["categories_id"], name: "index_budgets_on_categories_id"
+    t.integer "category_id", null: false
+    t.index ["category_id"], name: "index_budgets_on_category_id"
     t.index ["user_id"], name: "index_budgets_on_user_id"
   end
 
@@ -95,7 +95,7 @@ ActiveRecord::Schema[8.0].define(version: 2026_01_28_142512) do
   end
 
   add_foreign_key "accounts", "users"
-  add_foreign_key "budgets", "categories", column: "categories_id"
+  add_foreign_key "budgets", "categories"
   add_foreign_key "budgets", "users"
   add_foreign_key "invoices", "accounts"
   add_foreign_key "monthly_summaries", "users"
