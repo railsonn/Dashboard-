@@ -77,135 +77,30 @@
 
 
 
-// /* ===== RESET BÁSICO DA TABLE ===== */
-// table {
-//   width: 100%;
-//   border-collapse: collapse;
-//   background-color: #161B2E;
-//   color: #ffffff;
-//   font-size: 0.95rem;
-// }
 
-// /* ===== .table ===== */
-// .table th,
-// .table td {
-//   padding: 0.75rem 0.75rem;
-//   border-bottom: 1px solid #1f2a44;
-//   text-align: left;
-//   vertical-align: middle;
-// }
+/* pagination styles */
 
-// /* ===== .align-middle ===== */
-// .align-middle th,
-// .align-middle td {
-//   vertical-align: middle;
-// }
+/* Botões normais */
+.pagination .page-link {
+  background-color: #161B2E;
+  color: #ffffff;
+  border: 1px solid #1f2642;
+}
 
-// /* ===== THEAD ===== */
-// .table thead {
-//   background-color: #0d1b2a;
-// }
+/* Hover */
+.pagination .page-link:hover {
+  background-color: #1f2642;
+  color: #ffffff;
+}
 
-// .table thead th {
-//   color: #ffffff;
-//   font-weight: 600;
-//   text-transform: uppercase;
-//   font-size: 0.75rem;
-//   letter-spacing: 0.05em;
-//   border-bottom: 2px solid #1f2a44;
-// }
+/* 🔥 Botão clicado / página atual */
+.pagination .page-item.active .page-link {
+  background-color: #0D6EFD;
+  border-color: #0D6EFD;
+  color: #ffffff;
+}
 
-// /* ===== .table-dark ===== */
-// .table-dark {
-//   background-color: #0d1b2a;
-//   color: #ffffff;
-// }
-
-// /* ===== TBODY ===== */
-// .table tbody tr {
-//   background-color: #161B2E;
-//   transition: background-color 0.2s ease;
-// }
-
-// /* ===== .table-striped ===== */
-// .table-striped tbody tr:nth-child(odd) {
-//   background-color: #141a2f;
-// }
-
-// /* ===== .table-hover ===== */
-// .table-hover tbody tr:hover {
-//   background-color: #1f2a44;
-// }
-
-// /* ===== TD ESPECÍFICOS ===== */
-// .table td {
-//   font-weight: 400;
-// }
-
-// .table td span.fw-bold {
-//   font-weight: 600;
-// }
-
-// /* ===== BADGES ===== */
-// .table .badge {
-//   display: inline-block;
-//   padding: 0.35em 0.6em;
-//   font-size: 0.7rem;
-//   font-weight: 600;
-//   border-radius: 999px;
-//   background-color: #0d6efd;
-//   color: #ffffff;
-// }
-
-// /* ===== BOTÕES ===== */
-// .table .btn {
-//   display: inline-block;
-//   padding: 0.3rem 0.6rem;
-//   font-size: 0.7rem;
-//   font-weight: 600;
-//   border-radius: 6px;
-//   text-decoration: none;
-//   cursor: pointer;
-//   transition: all 0.2s ease;
-// }
-
-// /* Outline Primary */
-// .table .btn-outline-primary {
-//   color: #4dabf7;
-//   border: 1px solid #4dabf7;
-//   background: transparent;
-// }
-
-// .table .btn-outline-primary:hover {
-//   background-color: #4dabf7;
-//   color: #0d1b2a;
-// }
-
-// /* Outline Warning */
-// .table .btn-outline-warning {
-//   color: #ffc107;
-//   border: 1px solid #ffc107;
-//   background: transparent;
-// }
-
-// .table .btn-outline-warning:hover {
-//   background-color: #ffc107;
-//   color: #0d1b2a;
-// }
-
-// /* Outline Danger */
-// .table .btn-outline-danger {
-//   color: #dc3545;
-//   border: 1px solid #dc3545;
-//   background: transparent;
-// }
-
-// .table .btn-outline-danger:hover {
-//   background-color: #dc3545;
-//   color: #ffffff;
-// }
-
-// /* ===== TEXT-CENTER ===== */
-// .table .text-center {
-//   text-align: center;
-// }
+/* Remove branco do container */
+.pagination {
+  background-color: transparent;
+}
