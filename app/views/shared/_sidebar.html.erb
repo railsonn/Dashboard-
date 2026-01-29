@@ -1,0 +1,33 @@
+<!-- Nav secundary vertical mais o conteudo ao lado -->
+<div class="d-flex">
+  <nav class="navbar flex-column vh-90 p-3 sidebar" style="width: 240px;" id="sidebarMenu">
+    <div class="navbar-nav d-flex h-100 w-100">
+      <div class="d-flex flex-column gap-3">
+        <%= link_to root_path, class: "nav-link d-flex align-items-center gap-2 #{nav_active(root_path)}" do %>
+          <i class="bi bi-speedometer2"></i>
+          Dashboard
+        <% end %>
+
+        <%= link_to accounts_path, class: "nav-link d-flex align-items-center gap-2 #{nav_active(accounts_path)}" do %>
+          <i class="bi bi-bank"></i>
+          Accounts
+        <% end %>
+
+        <%= link_to transactions_path, class: "nav-link d-flex align-items-center gap-2 #{nav_active(transactions_path)}" do %>
+          <i class="bi bi-arrow-left-right"></i>
+          Transactions
+        <% end %>
+
+
+        <%= link_to budgets_path, class: "nav-link d-flex align-items-center gap-2 #{nav_active(budgets_path)}" do %>
+          <i class="bi bi-sliders"></i>
+          Budgets
+        <% end %>
+
+        <%= link_to invoices_path, class: "nav-link d-flex align-items-center gap-2 #{nav_active(invoices_path)}" do %>
+          <i class="bi bi-receipt"></i>
+          Invoices
+        <% end %>
+      </div>
+    </div>
+  </nav>
