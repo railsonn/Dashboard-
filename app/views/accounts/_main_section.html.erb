@@ -1,63 +1,54 @@
-<main class="p-4 flex-grow-1" id="mainContent">
+<div class="table-responsive">
+  <table class="table table-dark table-striped table-hover align-middle mb-0">
+    <thead class="text-uppercase small">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Balance</th>
+        <th>Type</th>
+        <th class="text-center">Actions</th>
+      </tr>
+    </thead>
 
-  <% if notice.present? %>
-    <div class="alert alert-success">
-      <%= notice %>
-    </div>
-  <% end %>
-
-  <div class="table-responsive">
-    <table class="table table-dark table-striped table-hover align-middle mb-0">
-      <thead class="text-uppercase small">
+    <tbody>
+      <% @accounts.each do |account| %>
         <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Balance</th>
-          <th>Type</th>
-          <th class="text-center">Actions</th>
+          <td><%= account.id %></td>
+
+          <td class="fw-medium">
+            <%= account.name %>
+          </td>
+
+          <td class="fw-bold">
+            <%= number_to_currency(account.balance) %>
+          </td>
+
+          <td>
+            <span class="badge rounded-pill bg-primary px-3 py-1 text-uppercase">
+              <%= account.accountType %>
+            </span>
+          </td>
+
+          <td class="text-center d-flex gap-2 justify-content-center">
+            <%= link_to 'View',
+              account_path(account),
+              class: "btn btn-sm btn-outline-primary fw-semibold" %>
+
+            <%= link_to 'Edit',
+              edit_account_path(account),
+              class: "btn btn-sm btn-outline-warning fw-semibold" %>
+
+            <%= link_to 'Delete',
+              account_path(account),
+              method: :delete,
+              data: { confirm: 'Are you sure?' },
+              class: "btn btn-sm btn-outline-danger fw-semibold" %>
+          </td>
         </tr>
-      </thead>
-
-      <tbody>
-        <% @accounts.each do |account| %>
-          <tr>
-            <td><%= account.id %></td>
-
-            <td class="fw-medium">
-              <%= account.name %>
-            </td>
-
-            <td class="fw-bold">
-              <%= number_to_currency(account.balance) %>
-            </td>
-
-            <td>
-              <span class="badge rounded-pill bg-primary px-3 py-1 text-uppercase">
-                <%= account.accountType %>
-              </span>
-            </td>
-
-            <td class="text-center d-flex gap-2 justify-content-center">
-              <%= link_to 'View',
-                account_path(account),
-                class: "btn btn-sm btn-outline-primary fw-semibold" %>
-
-              <%= link_to 'Edit',
-                edit_account_path(account),
-                class: "btn btn-sm btn-outline-warning fw-semibold" %>
-
-              <%= link_to 'Delete',
-                account_path(account),
-                method: :delete,
-                data: { confirm: 'Are you sure?' },
-                class: "btn btn-sm btn-outline-danger fw-semibold" %>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-    <div class="d-flex justify-content-end align-items-center mt-3">
-      <%= paginate @accounts %>
-    </div>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="d-flex justify-content-end align-items-center mt-3">
+    <%= paginate @accounts %>
   </div>
-</main>
+</div>
