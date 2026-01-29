@@ -120,3 +120,28 @@
   background-color: transparent;
 }
 
+
+
+
+
+/* conteudo principal da pagina feature */
+
+#content-diretor {
+  background-color: #0d1b2a; /* azul escuro */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container-feature {
+  width: 93%;
+  height: 93%;
+}
+
+#div-title {
+  padding: 20px;
+}
+
+#container-feature hr {
+  border-color: gray;
+}
