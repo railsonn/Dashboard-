@@ -3,7 +3,7 @@ class BudgetsController < ApplicationController
 
   # GET /budgets or /budgets.json
   def index
-    @budgets = Budget.order(:limit_amount).page(params[:page]).per(10)
+    @budgets = Budget.order(:id).page(params[:page]).per(10)
   end
 
   # GET /budgets/1 or /budgets/1.json
