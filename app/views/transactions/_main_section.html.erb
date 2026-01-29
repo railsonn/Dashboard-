@@ -1,62 +1,60 @@
-<main id="mainContent" class="p-4 flex-grow-1">
-  <div class="table-responsive">
-    <table class="table table-dark table-striped table-hover align-middle mb-0">
-      <thead class="text-uppercase small">
+<div class="table-responsive">
+  <table class="table table-dark table-striped table-hover align-middle mb-0">
+    <thead class="text-uppercase small">
+      <tr>
+        <th>ID</th>
+        <th>Transaction Date</th>
+        <th>Description</th>
+        <th>Amount</th>
+        <th>Type</th>
+        <th class="text-center">Actions</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <% transactions.each do |transaction| %>
         <tr>
-          <th>ID</th>
-          <th>Transaction Date</th>
-          <th>Description</th>
-          <th>Amount</th>
-          <th>Type</th>
-          <th class="text-center">Actions</th>
-        </tr>
-      </thead>
-      
-      <tbody>
-        <% transactions.each do |transaction| %>
-          <tr>
-            <td><%= transaction.id %></td>
+          <td><%= transaction.id %></td>
 
-            <td class="fw-medium">
-              <%= transaction.transaction_date %>
-            </td>
+          <td class="fw-medium">
+            <%= transaction.transaction_date %>
+          </td>
 
-            <td class="fw-medium">
-              <%= transaction.description %>
-            </td>
+          <td class="fw-medium">
+            <%= transaction.description %>
+          </td>
 
-            <td class="fw-bold">
-              <%= number_to_currency(transaction.amount) %>
-            </td>
-            
-            <td>
-              <span class="badge <%= transaction.transaction_type == 'income' ? 'bg-success' : 'bg-danger' %> text-uppercase small">
-                <%= transaction.transaction_type %>
-              </span>
-            </td>
-
+          <td class="fw-bold">
+            <%= number_to_currency(transaction.amount) %>
+          </td>
           
-            <td class="text-center d-flex gap-2 justify-content-center">
-              <%= link_to 'View',
-                transaction_path(transaction),
-                class: "btn btn-sm btn-outline-primary fw-semibold" %>
+          <td>
+            <span class="badge <%= transaction.transaction_type == 'income' ? 'bg-success' : 'bg-danger' %> text-uppercase small">
+              <%= transaction.transaction_type %>
+            </span>
+          </td>
 
-              <%= link_to 'Edit',
-                edit_transaction_path(transaction),
-                class: "btn btn-sm btn-outline-warning fw-semibold" %>
+        
+          <td class="text-center d-flex gap-2 justify-content-center">
+            <%= link_to 'View',
+              transaction_path(transaction),
+              class: "btn btn-sm btn-outline-primary fw-semibold" %>
 
-              <%= link_to 'Delete',
-                transaction_path(transaction),
-                method: :delete,
-                data: { confirm: 'Are you sure?' },
-                class: "btn btn-sm btn-outline-danger fw-semibold" %>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-    <div class="d-flex justify-content-end align-items-center mt-3">
-      <%= paginate @transactions %>
-    </div>
+            <%= link_to 'Edit',
+              edit_transaction_path(transaction),
+              class: "btn btn-sm btn-outline-warning fw-semibold" %>
+
+            <%= link_to 'Delete',
+              transaction_path(transaction),
+              method: :delete,
+              data: { confirm: 'Are you sure?' },
+              class: "btn btn-sm btn-outline-danger fw-semibold" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="d-flex justify-content-end align-items-center mt-3">
+    <%= paginate @transactions %>
   </div>
-</main>
+</div>
