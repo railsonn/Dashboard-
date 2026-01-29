@@ -58,6 +58,8 @@
 #mainContent {
   background-color: #111525; /* azul bem escuro */
   color: #ffffff;
+  
+  width: 100%;
 }
 
 .card {
@@ -143,5 +145,30 @@
 }
 
 #container-feature hr {
-  border-color: gray;
+  border-color: rgb(128, 128, 128);
+}
+
+
+
+
+/* grafico linear */
+
+.line-chart-wrapper {
+  height: 360px;
+  background-color: #0d1b2a;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.card-body {
+  width: 50%;
+}
+
+#div-text-legend {
+  display: grid;
+  flex-direction: column;
+}
+
+.text-legend {
+  color: #ADB5BD;
 }
