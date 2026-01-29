@@ -17,21 +17,21 @@
             <%= account.id %>
           </td>
 
-          <td style="<%= background_tr(index) %> ">
+          <td style="<%= background_tr(index) %> font-weight: medium ">
             <%= account.name %>
           </td>
 
-          <td class="fw-bold">
+          <td style="<%= background_tr(index) %> font-weight: bold ">
             <%= number_to_currency(account.balance) %>
           </td>
 
-          <td class="fw-bold">
+          <td style="<%= background_tr(index) %> font-weight: bold ">
             <span class="badge rounded-pill bg-primary px-3 py-1 text-uppercase">
               <%= account.accountType %>
             </span>
           </td>
 
-          <td class="text-center d-flex gap-2 justify-content-center">
+          <td class="text-center d-flex gap-2 justify-content-center"  style="<%= background_tr(index) %> ">
             <%= link_to 'View',
               account_path(account),
               class: "btn btn-sm btn-outline-primary fw-semibold" %>
