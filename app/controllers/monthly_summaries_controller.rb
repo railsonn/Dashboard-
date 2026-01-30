@@ -1,4 +1,5 @@
 class MonthlySummariesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_monthly_summary, only: %i[ show edit update destroy ]
 
   # GET /monthly_summaries or /monthly_summaries.json
