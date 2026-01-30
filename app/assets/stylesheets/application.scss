@@ -14,13 +14,22 @@
 
 
 #navbarContainer {
-  background-color: #0d1b2a; /* azul escuro */
+  background-color: #272d35; /* azul escuro */
+
+  /* #0d1b2a */
 }
 
-#mainNavbar {
+#mainNavbar-dark {
   width: 100%;
   background-color: #0D6EFD; /* azul escuro */
 }
+
+#mainNavbar-light {
+  width: 100%;
+  background-color: #3686ff; /* azul escuro */
+
+}
+
 
 .sidebar {
   width: 240px;
@@ -31,25 +40,47 @@
 
 #sidebarMenu {
   background-color: #161B2E; /* azul escuro */
+
 }
 
-.sidebar .nav-link {
+.sidebar .nav-link-dark {
   color: #ffffff;
   border-radius: 8px;
   padding: 8px 12px;
   width: 100%;
+  text-decoration: none;
 }
 
-.sidebar .nav-link:hover {
+.sidebar .nav-link-light {
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  width: 100%;
+  text-decoration: none;
+}
+
+.sidebar .nav-link-dark:hover {
   background-color: #4dabf7; /* azul claro */
   color: #0d1b2a;
 }
 
-.nav-link.active {
+.sidebar .nav-link-light:hover {
+  background-color: #5ab5ff; /* azul claro */
+  color: #0d1b2a;
+}
+
+.nav-link-dark.active {
   background-color: #4dabf7; 
-  color: #fff;
+  color: #0d1b2a;
   border-radius: 8px;
 }
+
+.nav-link-light.active {
+  background-color: #5ab5ff; 
+  color: #0d1b2a;
+  border-radius: 8px;
+}
+
 
 
 
@@ -260,14 +291,103 @@
 
 
 /* Tables style */
-.table-responsive table th {
-  background-color: #0D1B2A;
-  color: #ADB5BD;
+// .table-responsive table th {
+//   background-color: #0D1B2A;
+//   color: #ADB5BD;
+// }
+
+// .table-responsive table {
+//   border: 1px solid #1F2A44;
+// }
+
+
+
+
+/* =========================
+   TABLE DARK
+========================= */
+
+#accounts-table-dark table {
+  background-color: #111525;
+  color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-.table-responsive table {
-  border: 1px solid #1F2A44;
+#accounts-table-dark thead {
+  background-color: #161B2E;
 }
+
+/* linhas (usando TD, não TR) */
+#accounts-table-dark tbody td {
+  background-color: #111525;
+  color: #ffffff;
+  border-color: rgba(255,255,255,.08);
+}
+
+/* hover (aplicado nos TDs) */
+#accounts-table-dark tbody tr:hover td {
+  background-color: #1d233b;
+}
+
+
+/* =========================
+   STRIPED (override Bootstrap)
+========================= */
+
+#accounts-table-dark.table-striped tbody tr:nth-of-type(odd) td {
+  background-color: #141a33;
+}
+
+
+/* =========================
+   TABLE LIGHT
+========================= */
+
+#accounts-table-light table {
+  background-color: #ffffff;
+  color: #111525;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#accounts-table-light thead {
+  background-color: #f1f3f5;
+}
+
+#accounts-table-light tbody td {
+  background-color: #ffffff;
+  color: #111525;
+  border-color: rgba(0,0,0,.08);
+}
+
+#accounts-table-light tbody tr:hover td {
+  background-color: #f5f6fa;
+}
+
+#accounts-table-light.table-striped tbody tr:nth-of-type(odd) td {
+  background-color: #f8f9fb;
+}
+
+
+
+
+
+
+
+
+/* =========================
+   BADGES
+========================= */
+
+#mainContent-dark .badge {
+  filter: brightness(1.1);
+}
+
+#mainContent-light .badge {
+  filter: none;
+}
+
 
 
 
