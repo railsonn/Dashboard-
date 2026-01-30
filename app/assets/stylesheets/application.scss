@@ -154,6 +154,7 @@
 /* grafico linear */
 
 .line-chart-wrapper {
+  width: 95%;
   height: 360px;
   background-color: #091522;
   border-radius: 12px;
@@ -163,11 +164,13 @@
 #card-primary {
   height: 100%;
   border-radius: 0px;
+  display: flex;
+  flex-direction: row;
 }
 
 #card-secondary {
-  width: 50%;
-  padding: 40px 10px 20px 50px;
+  width: 40%;
+  padding: 40px 10px 20px 20px;
 }
 
 #div-text-legend {
@@ -177,4 +180,60 @@
 
 .text-legend {
   color: #ADB5BD;
+}
+
+
+
+
+/* grafico de barras */
+
+.bar-chart-wrapper {
+  width: 90%;
+  height: 360px;
+  background-color: #091522;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 260px;
+}
+
+.bar {
+  width: 40px;
+  border-radius: 6px 6px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 0.65rem;
+  color: #fff;
+  padding-top: 4px;
+}
+
+.receita {
+  background-color: #0d6efd;
+}
+
+.despesa {
+  background-color: #dc3545;
+}
+
+.month {
+  display: block;
+  margin-top: 8px;
+  color: #8a8fa3;
+  font-size: 0.8rem;
+}
+
+
+
+
+#card-grafico-barra {
+  width: 40%;
+  padding: 40px 10px 20px 10px;
+  position: relative;
+  top: 30%;
 }
