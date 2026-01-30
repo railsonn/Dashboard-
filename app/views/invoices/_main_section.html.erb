@@ -1,4 +1,4 @@
-<div class="table-responsive">
+<div class="table-responsive" id="invoices-table-<%= @theme %>">
   <table class="table table-striped table-hover align-middle mb-0">
     <thead class="text-uppercase small">
       <tr>
@@ -13,25 +13,25 @@
     <tbody>
     <% invoices.each_with_index do |invoice, index| %>
       <tr>
-        <td style="<%= background_tr(index) %> font-weight: bold">
+        <td>
           <%= invoice.id %>
         </td>
 
-        <td style="<%= background_tr(index) %> font-weight: bold">
+        <td>
           <span class="badge <%= invoice.status == 'Pago' ? 'bg-success' : invoice.status == 'Pendente' ? 'bg-warning' : 'bg-danger' %> text-uppercase small">
             <%= invoice.status %>
           </span>
         </td>
 
-        <td style="<%= background_tr(index) %> font-weight: bold">
+        <td>
           <%= invoice.due_date %>
         </td>
 
-        <td style="<%= background_tr(index) %> font-weight: bold">
+        <td>
           <%= number_to_currency(invoice.total_amount) %>
         </td>
 
-        <td class="text-center d-flex gap-2 justify-content-center" style="<%= background_tr(index) %> ">
+        <td class="text-center d-flex gap-2 justify-content-center">
           <%= link_to 'View',
             invoice_path(invoice),
             class: "btn btn-sm btn-outline-primary fw-semibold" %>
