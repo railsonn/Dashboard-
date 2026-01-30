@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "settings/preferences"
+  get "settings/integrations"
   get "feature/index"
   get "report/index"
 
