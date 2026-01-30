@@ -13,15 +13,15 @@
     <tbody>
       <% @accounts.each_with_index do |account, index| %>
         <tr>
-          <td>
+          <td class="fw-bold">
             <%= account.id %>
           </td>
 
-          <td>
+          <td class="fw-medium">
             <%= account.name %>
           </td>
 
-          <td>
+          <td class="fw-bold">
             <%= number_to_currency(account.balance) %>
           </td>
 

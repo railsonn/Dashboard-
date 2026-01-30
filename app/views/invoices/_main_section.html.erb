@@ -13,7 +13,7 @@
     <tbody>
     <% invoices.each_with_index do |invoice, index| %>
       <tr>
-        <td>
+        <td class="fw-bold">
           <%= invoice.id %>
         </td>
 
@@ -23,11 +23,11 @@
           </span>
         </td>
 
-        <td>
+        <td class="fw-bold">
           <%= invoice.due_date %>
         </td>
 
-        <td>
+        <td class="fw-bold">
           <%= number_to_currency(invoice.total_amount) %>
         </td>
 
