@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get "settings/preferences"
   get "settings/integrations"
   patch "settings/update_preferences"
