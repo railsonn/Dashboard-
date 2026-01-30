@@ -4,7 +4,7 @@ class AccountsController < ApplicationController
 
   # GET /accounts or /accounts.json
   def index
-    @accounts = Account.order(:id).page(params[:page]).per(10)
+    @accounts = Account.order(:id).page(params[:page]).per(12)
   end
 
   # GET /accounts/1 or /accounts/1.json
