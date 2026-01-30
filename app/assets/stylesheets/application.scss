@@ -155,13 +155,19 @@
 
 .line-chart-wrapper {
   height: 360px;
-  background-color: #0d1b2a;
+  background-color: #091522;
   border-radius: 12px;
   padding: 12px;
 }
 
-.card-body {
+#card-primary {
+  height: 100%;
+  border-radius: 0px;
+}
+
+#card-secondary {
   width: 50%;
+  padding: 40px 10px 20px 50px;
 }
 
 #div-text-legend {

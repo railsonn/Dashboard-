@@ -59,13 +59,13 @@ puts "Criando accounts..."
 
 
 
-25.times do 
-  Invoice.create!(
-    total_amount: Faker::Number.decimal(l_digits: 4, r_digits: 2),
-    due_date: Faker::Date.forward(days: 30),
-    status: ['Pendente', 'Pago', 'Atrasado'].sample,
-    account: Account.all.sample
-  )
-end
+# 25.times do 
+#   Invoice.create!(
+#     total_amount: Faker::Number.decimal(l_digits: 4, r_digits: 2),
+#     due_date: Faker::Date.forward(days: 30),
+#     status: ['Pendente', 'Pago', 'Atrasado'].sample,
+#     account: Account.all.sample
+#   )
+# end
 
 puts "Budgets criadas com sucesso!"
