@@ -18,7 +18,7 @@
         </td>
 
         <td>
-          <span class="badge <%= invoice.status == 'Pago' ? 'bg-success' : invoice.status == 'Pendente' ? 'bg-warning' : 'bg-danger' %> text-uppercase small">
+          <span class="badge <%= invoice.status == 'Pago' ? 'bg-success text-light' : invoice.status == 'Pendente' ? 'bg-warning text-light' : 'bg-danger text-light' %> text-uppercase small">
             <%= invoice.status %>
           </span>
         </td>
