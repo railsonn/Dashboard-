@@ -4,7 +4,7 @@ class SettingsController < ApplicationController
   end
 
   def update_preferences
-    @updated = current_user.update!(
+    current_user.update!(
       language: params[:language],
       currency: params[:currency],
       theme: params[:theme],

@@ -55,8 +55,15 @@
 
 // Main Content
 
-#mainContent {
+#mainContent-dark {
   background-color: #111525; /* azul bem escuro */
+  color: #ffffff;
+  
+  width: 100%;
+}
+
+#mainContent-light {
+  background-color: #eaeaea; /* azul bem escuro */
   color: #ffffff;
   
   width: 100%;
