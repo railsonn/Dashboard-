@@ -307,26 +307,29 @@
    TABLE DARK
 ========================= */
 
-#accounts-table-dark table {
+
+#pages-table-dark table {
   background-color: #111525;
   color: #ffffff;
   border-radius: 12px;
   overflow: hidden;
+  box-shadow: 2px 3px 5px #0a0c16;
 }
 
-#accounts-table-dark thead {
-  background-color: #161B2E;
+#pages-table-dark thead th {
+  background-color: #111525;
+  color: white;
 }
 
 /* linhas (usando TD, não TR) */
-#accounts-table-dark tbody td {
+#pages-table-dark tbody td {
   background-color: #111525;
   color: #ffffff;
-  border-color: rgba(255,255,255,.08);
+  border-color: rgba(109, 109, 109, 0.584);
 }
 
 /* hover (aplicado nos TDs) */
-#accounts-table-dark tbody tr:hover td {
+#pages-table-dark tbody tr:hover td {
   background-color: #1d233b;
 }
 
@@ -335,7 +338,7 @@
    STRIPED (override Bootstrap)
 ========================= */
 
-#accounts-table-dark.table-striped tbody tr:nth-of-type(odd) td {
+#pages-table-dark.table-striped tbody tr:nth-of-type(odd) td {
   background-color: #141a33;
 }
 
@@ -344,28 +347,28 @@
    TABLE LIGHT
 ========================= */
 
-#accounts-table-light table {
+#pages-table-light table {
   background-color: #ffffff;
   color: #111525;
   border-radius: 12px;
   overflow: hidden;
 }
 
-#accounts-table-light thead {
+#pages-table-light thead {
   background-color: #f1f3f5;
 }
 
-#accounts-table-light tbody td {
+#pages-table-light tbody td {
   background-color: #ffffff;
   color: #111525;
   border-color: rgba(0,0,0,.08);
 }
 
-#accounts-table-light tbody tr:hover td {
+#pages-table-light tbody tr:hover td {
   background-color: #f5f6fa;
 }
 
-#accounts-table-light.table-striped tbody tr:nth-of-type(odd) td {
+#pages-table-light.table-striped tbody tr:nth-of-type(odd) td {
   background-color: #f8f9fb;
 }
 
