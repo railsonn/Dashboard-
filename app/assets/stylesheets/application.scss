@@ -581,10 +581,6 @@
 
 
 
-
-
-
-
 /* conteudo principal da pagina feature */
 
 #content-diretor {
@@ -695,4 +691,89 @@
   padding: 40px 10px 20px 10px;
   position: relative;
   top: 30%;
+}
+
+
+
+
+
+/* settings */
+/* pagina preferences */
+/* light */
+.light-settings {
+  background-color: #e9ecef;
+}
+
+.light-settings .card {
+  background-color: #ffffff;
+  color: #212529;
+}
+
+.light-settings .form-label {
+  color: #495057;
+}
+
+.light-settings .form-select,
+.light-settings .form-check-input {
+  background-color: #ffffff;
+  color: #212529;
+  border: 1px solid #ced4da;
+}
+
+.light-settings .form-check-label {
+  color: #495057;
+}
+
+.light-settings .form-check-input:checked {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.light-settings .alert-success {
+  background-color: #e9f7ef;
+  color: #0f5132;
+  border-color: #badbcc;
+}
+
+
+/* dark */
+.dark-settings {
+  background-color: #111525;
+}
+
+.dark-settings .card {
+  background-color: #0d1b2a;
+  color: #e9ecef;
+  border: 1px solid #1e2a3a;
+}
+
+.dark-settings .form-label {
+  color: #ced4da;
+}
+
+.dark-settings .form-select,
+.dark-settings .form-check-input {
+  background-color: #0b1622;
+  color: #e9ecef;
+  border: 1px solid #1e2a3a;
+}
+
+.dark-settings .form-select option {
+  background-color: #0b1622;
+  color: #e9ecef;
+}
+
+.dark-settings .form-check-label {
+  color: #ced4da;
+}
+
+.dark-settings .form-check-input:checked {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.dark-settings .alert-success {
+  background-color: #0f2f1f;
+  color: #75b798;
+  border-color: #1e4d3a;
 }
