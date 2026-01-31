@@ -32,18 +32,13 @@
               <label class="form-label d-block">Theme</label>
 
               <div class="form-check form-check-inline">
-                <%= f.radio_button :theme, "light", class: "form-check-input" %>
-                <%= f.label :theme_light, "Light", class: "form-check-label active" %>
+                <%= f.radio_button :theme, "light", class: "form-check-input", checked: (@theme == "light") %>
+                <%= f.label :theme_light, "Light", class: "form-check-label"  %>
               </div>
 
               <div class="form-check form-check-inline">
-                <%= f.radio_button :theme, "dark", class: "form-check-input" %>
+                <%= f.radio_button :theme, "dark", class: "form-check-input", checked: (@theme == "dark") %>
                 <%= f.label :theme_dark, "Dark", class: "form-check-label" %>
-              </div>
-
-              <div class="form-check form-check-inline">
-                <%= f.radio_button :theme, "auto", class: "form-check-input" %>
-                <%= f.label :theme_auto, "Auto", class: "form-check-label" %>
               </div>
             </div>
 
@@ -70,17 +65,8 @@
             </div>
 
           <% end %>
-
         </div>
       </div>
-
     </div>
   </div>
-
-  <% if notice.present? %>
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-      <%= notice %>
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-  <% end %>
 </div>
