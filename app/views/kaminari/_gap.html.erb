@@ -1,3 +1,7 @@
-<li class='page-item disabled'>
-  <%= link_to raw(t 'views.pagination.truncate'), '#', class: 'page-link' %>
+<% theme = local_assigns[:pagination_theme] || 'light' %>
+
+<li class="page-item disabled <%= theme %>-page-item">
+  <%= link_to raw(t('views.pagination.truncate')),
+        '#',
+        class: 'page-link theme-page-link' %>
 </li>

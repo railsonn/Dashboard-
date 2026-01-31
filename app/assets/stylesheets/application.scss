@@ -419,30 +419,167 @@
 
 /* pagination styles */
 
-/* Botões normais */
-.pagination .page-link {
-  background-color: #161B2E;
-  color: #ffffff;
-  border: 1px solid #1f2642;
+/* Prev_page */
+/* light */
+.light-page-item .light-page-link {
+  background-color: #ffffff;
+  color: #0d6efd;
+  border: 1px solid #dee2e6;
 }
 
-/* Hover */
-.pagination .page-link:hover {
-  background-color: #1f2642;
+.light-page-item .light-page-link:hover {
+  background-color: #d9e9ff;
+  color: #0a58ca;
+}
+
+.light-page-item.disabled .light-page-link {
+  background-color: #f8f9fa;
+  color: #adb5bd;
+}
+
+/* dark */
+
+.dark-page-item .dark-page-link {
+  background-color: #0d1b2a;
+  color: #e9ecef;
+  border: 1px solid #1e2a3a;
+}
+
+.dark-page-item .dark-page-link:hover {
+  background-color: #1b263b;
   color: #ffffff;
 }
 
-/* 🔥 Botão clicado / página atual */
-.pagination .page-item.active .page-link {
-  background-color: #0D6EFD;
-  border-color: #0D6EFD;
+.dark-page-item.disabled .dark-page-link {
+  background-color: #0b1622;
+  color: #6c757d;
+}
+
+
+/* active page */
+
+.page-item.active .light-page-link {
+  background-color: #0d6efd;
+  color: #fff;
+  border-color: #0d6efd;
+}
+
+.page-item.active .dark-page-link {
+  background-color: #0d6efd;
+  color: #fff;
+  border-color: #0d6efd;
+}
+
+
+/* paginator */
+/* dark */
+.dark-pagination .page-link {
+  background-color: #0d1b2a;
+  color: #e9ecef;
+  border: 1px solid #1e2a3a;
+}
+
+.dark-pagination .page-link:hover {
+  background-color: #1b263b;
   color: #ffffff;
 }
 
-/* Remove branco do container */
-.pagination {
-  background-color: transparent;
+.dark-pagination .page-item.disabled .page-link {
+  background-color: #0b1622;
+  color: #6c757d;
 }
+
+.dark-pagination .page-item.active .page-link {
+  background-color: #0d6efd;
+  color: #ffffff;
+  border-color: #0d6efd;
+}
+
+
+/* light */
+
+.light-pagination .page-link {
+  background-color: #ffffff;
+  color: #0d6efd;
+  border: 1px solid #dee2e6;
+}
+
+.light-pagination .page-link:hover {
+  background-color: #e9f2ff;
+  color: #0a58ca;
+}
+
+.light-pagination .page-item.disabled .page-link {
+  background-color: #f8f9fa;
+  color: #adb5bd;
+}
+
+.light-pagination .page-item.active .page-link {
+  background-color: #0d6efd;
+  color: #ffffff;
+  border-color: #0d6efd;
+}
+
+
+
+/* page */
+/* dark */
+.dark-page-item .theme-page-link {
+  background-color: #0d1b2a;
+  color: #e9ecef;
+  border: 1px solid #1e2a3a;
+}
+
+.dark-page-item .theme-page-link:hover {
+  background-color: #1b263b;
+  color: #ffffff;
+}
+
+.dark-page-item.active .theme-page-link {
+  background-color: #0d6efd;
+  color: #ffffff;
+  border-color: #0d6efd;
+}
+
+
+/* light */
+.light-page-item .theme-page-link {
+  background-color: #ffffff;
+  color: #0d6efd;
+  border: 1px solid #dee2e6;
+}
+
+.light-page-item .theme-page-link:hover {
+  background-color: #e9f2ff;
+  color: #0a58ca;
+}
+
+.light-page-item.active .theme-page-link {
+  background-color: #0d6efd;
+  color: #ffffff;
+  border-color: #0d6efd;
+}
+
+
+/* gap */
+/* dark */
+.dark-page-item.disabled .theme-page-link {
+  background-color: #0b1622;
+  color: #6c757d;
+  border: 1px solid #1e2a3a;
+  cursor: not-allowed;
+}
+
+/* light */
+.light-page-item.disabled .theme-page-link {
+  background-color: #f8f9fa;
+  color: #adb5bd;
+  border: 1px solid #dee2e6;
+  cursor: not-allowed;
+}
+
+
+
 
 
 
