@@ -777,3 +777,90 @@
   color: #75b798;
   border-color: #1e4d3a;
 }
+
+
+
+
+
+/* Pagina settings/preferences */
+
+/* Container da página de settings */
+
+/* Container principal */
+.light-settings,
+.dark-settings {
+  min-height: calc(100vh - 56px);
+  padding-top: 2rem;
+}
+
+/* Mantém o grid intacto, só aumenta o limite */
+.light-settings .col-lg-8,
+.dark-settings .col-lg-8 {
+  max-width: 100%;
+}
+
+/* Card maior e centralizado */
+.light-settings .card,
+.dark-settings .card {
+  width: 100%;
+  max-width: 960px; /* ajuste se quiser mais largo */
+  margin: 0 auto;
+}
+
+/* Mais espaço interno */
+.light-settings .card-body,
+.dark-settings .card-body {
+  padding: 2.5rem;
+}
+
+/* Título */
+.light-settings h4,
+.dark-settings h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Inputs mais altos */
+.light-settings .form-select,
+.dark-settings .form-select {
+  min-height: 46px;
+}
+
+
+
+/* Settings page wrapper */
+.light-settings .row,
+.dark-settings .row {
+  justify-content: center;
+}
+
+/* FORÇA a coluna a ocupar mais espaço */
+@media (min-width: 1200px) {
+  .light-settings .col-xl-6,
+  .dark-settings .col-xl-6 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Em telas grandes também amplia no lg */
+@media (min-width: 992px) {
+  .light-settings .col-lg-8,
+  .dark-settings .col-lg-8 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Card com limite maior (opcional) */
+.light-settings .card,
+.dark-settings .card {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Mais presença visual */
+.light-settings .card-body,
+.dark-settings .card-body {
+  padding: 3rem;
+}
