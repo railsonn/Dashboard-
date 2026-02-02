@@ -1,9 +1,9 @@
 <div id="mainContent-report">
-  <div class="card shadow-sm" id="card-primary">
+  <div class="card-<%= @theme %> shadow-sm" id="card-primary">
     <div class="card-body" id="card-secondary">
-      <h6 class="mb-3">Evolução Financeira</h6>
+      <h6 class="mb-3" id="title-<%= @theme %>">Evolução Financeira</h6>
 
-      <div class="line-chart-wrapper">
+      <div class="line-chart-wrapper-<%= @theme %>">
         <svg viewBox="0 0 520 280" preserveAspectRatio="none" class="w-100 h-100">
 
           <!-- ===== EIXO Y (valores) ===== -->
@@ -66,22 +66,22 @@
       <div class="d-flex flex-wrap gap-3 mt-3 small" id="div-text-legend">
         <div>
           <span class="text-primary fw-semibold">●</span>
-          <span class="text-legend">Receitas</span>
+          <span class="text-legend-<%= @theme %>">Receitas</span>
         </div>
 
         <div>
           <span class="text-danger fw-semibold">●</span>
-          <span class="text-legend">Despesas</span>
+          <span class="text-legend-<%= @theme %>">Despesas</span>
         </div>
 
         <div>
           <span class="text-success fw-semibold">●</span>
-          <span class="text-legend">Saldo</span>
+          <span class="text-legend-<%= @theme %>">Saldo</span>
         </div>
 
         <div>
           <span class="text-warning fw-semibold">●</span>
-          <span class="text-legend">Open invoices</span>
+          <span class="text-legend-<%= @theme %>">Open invoices</span>
         </div>
       </div>
 
@@ -92,9 +92,9 @@
 
 
     <div class="card-body" id="card-grafico-barra">
-      <h6 class="mb-3">Receitas x Despesas (Mensal)</h6>
+      <h6 class="mb-3" id="title-<%= @theme %>">Receitas x Despesas (Mensal)</h6>
 
-      <div class="bar-chart-wrapper d-flex justify-content-around align-items-end">
+      <div class="bar-chart-wrapper-<%= @theme %> d-flex justify-content-around align-items-end">
 
         <!-- ===== JANEIRO ===== -->
         <div class="text-center">

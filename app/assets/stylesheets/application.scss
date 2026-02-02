@@ -610,14 +610,9 @@
 
 
 
-
+/* pagina report dentro de feature */
 /* grafico linear */
-
-#mainContent-report {
-  background-color: #091522;
-}
-
-.line-chart-wrapper {
+.line-chart-wrapper-dark {
   width: 95%;
   height: 360px;
   background-color: #091522;
@@ -625,9 +620,24 @@
   padding: 12px;
 }
 
-#mainContent-report .card {
+.line-chart-wrapper-light {
+  width: 95%;
+  height: 360px;
+  background-color: #f8f9fa ;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+#mainContent-report .card-dark {
+  background-color: #161B2E;
   height: 100%;
 }
+
+#mainContent-report .card-light {
+  background-color: #dee2e6;
+  height: 100%;
+}
+
 
 #card-primary {
   border-radius: 0px;
@@ -635,7 +645,14 @@
   flex-direction: row;
 }
 
-#card-primary .card-body h6 {
+#card-primary .card-body #title-dark {
+  color: #fff;
+  font-size: 24px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#card-primary .card-body #title-light {
+  color: #000;
   font-size: 24px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -650,8 +667,12 @@
   flex-direction: column;
 }
 
-.text-legend {
+.text-legend-dark {
   color: #ADB5BD;
+}
+
+.text-legend-light {
+  color: #2e3236;
 }
 
 
@@ -659,10 +680,18 @@
 
 /* grafico de barras */
 
-.bar-chart-wrapper {
+.bar-chart-wrapper-dark {
   width: 90%;
   height: 360px;
   background-color: #091522;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.bar-chart-wrapper-light {
+  width: 90%;
+  height: 360px;
+  background-color: #fff;
   border-radius: 12px;
   padding: 20px;
 }
@@ -686,11 +715,11 @@
 }
 
 .receita {
-  background-color: #0d6efd;
+  background-color: #0066ff;
 }
 
 .despesa {
-  background-color: #dc3545;
+  background-color: #ff122a;
 }
 
 .month {
