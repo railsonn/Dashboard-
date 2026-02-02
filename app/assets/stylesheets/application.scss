@@ -86,17 +86,20 @@
 
 // Main Content
 
+#mainContent-report {
+  color: #ffffff;
+  width: 100%;
+}
+
 #mainContent-dark {
   background-color: #111525; /* azul bem escuro */
   color: #ffffff;
-  
   width: 100%;
 }
 
 #mainContent-light {
   background-color: #eaeaea; /* azul bem escuro */
   color: #ffffff;
-  
   width: 100%;
 }
 
@@ -584,6 +587,7 @@
 /* conteudo principal da pagina feature */
 
 #content-diretor {
+  width: 100%;
   background-color: #0d1b2a; /* azul escuro */
   display: flex;
   align-items: center;
