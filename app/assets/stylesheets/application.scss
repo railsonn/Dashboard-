@@ -864,3 +864,17 @@
 .dark-settings .card-body {
   padding: 3rem;
 }
+
+/* Alinha o conteúdo à esquerda */
+.light-settings .row,
+.dark-settings .row {
+  justify-content: flex-start;
+}
+
+/* Remove centralização do card */
+.light-settings .card,
+.dark-settings .card {
+  margin-left: 0;
+  margin-right: auto;
+}
+
