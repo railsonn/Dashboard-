@@ -635,6 +635,11 @@
   flex-direction: row;
 }
 
+#card-primary .card-body h6 {
+  font-size: 24px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 #card-secondary {
   width: 40%;
   padding: 40px 10px 20px 20px;
