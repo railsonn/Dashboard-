@@ -590,8 +590,17 @@ body {
 
 /* conteudo principal da pagina feature */
 
-#content-diretor {
+#content-diretor-dark {
+  width: 100%;
   background-color: #0d1b2a; /* azul escuro */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#content-diretor-light {
+  width: 100%;
+  background-color: #dee2e6; /* azul escuro */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -602,13 +611,57 @@ body {
   height: 93%;
 }
 
-#container-feature .card-body {
+#container-feature .card-body-dark {
+  background-color: #161B2E;
   height: 100%;
 }
 
-#div-title {
-  padding: 20px;
+#container-feature .card-body-light {
+  background-color: #fff;
+  height: 100%;
 }
+
+.card-body-dark h5 {
+  color: #fff;
+}
+
+.card-body-dark p {
+  color: #fff;
+}
+
+.card-body-light h5 {
+  color: #161B2E;
+}
+
+.card-body-light p {
+  color: #161B2E;
+}
+
+#div-title-dark p {
+  padding: 20px;
+  color: #fff;
+}
+
+#div-title-dark h1 {
+  padding: 20px;
+  color: #fff;
+}
+
+#div-title-light h1 {
+  padding: 20px;
+  color: #161B2E;
+}
+
+.text-get-dark {
+  color: #fff;
+}
+
+.text-get-light {
+  color: #161B2E;
+}
+
+
+
 
 #container-feature hr {
   border-color: rgb(128, 128, 128);
