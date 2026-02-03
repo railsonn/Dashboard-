@@ -1,0 +1,8 @@
+pt:
+  navbar:
+    brand: "Dashboard"
+    settings: "Configurações"
+    preferences: "Preferências"
+    integrations: "Integrações"
+    features: "Funcionalidades"
+    admin: "Administração"

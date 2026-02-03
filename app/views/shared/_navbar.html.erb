@@ -1,32 +1,47 @@
 <div id="navbarContainer">
   <nav class="navbar navbar-dark navbar-expand-lg" id="mainNavbar-<%= theme %>">
     <div class="container-fluid">
-      <!-- Title do navbar primary -->
+
       <div>
-        <a class="navbar-brand" href="#">Dashboard</a>
+        <a class="navbar-brand" href="#">
+          <%= t("navbar.brand") %>
+        </a>
       </div>
 
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <!-- ms-auto empurra para a direita -->
         <ul class="navbar-nav ms-auto">
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Settings
+               data-bs-toggle="dropdown" aria-expanded="false">
+              <%= t("navbar.settings") %>
             </a>
+
             <ul class="dropdown-menu">
-              <%= link_to "Preferences", settings_preferences_path, class: "dropdown-item" %>
-              <li><a class="dropdown-item" href="#">Integrations</a></li>
+              <%= link_to t("navbar.preferences"),
+                  settings_preferences_path,
+                  class: "dropdown-item" %>
+
+              <li>
+                <a class="dropdown-item" href="#">
+                  <%= t("navbar.integrations") %>
+                </a>
+              </li>
             </ul>
           </li>
 
           <li class="nav-item">
-            <%= link_to "Features", feature_index_path, class: "nav-link" %>
+            <%= link_to t("navbar.features"),
+                feature_index_path,
+                class: "nav-link" %>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Admin</a>
+            <a class="nav-link" href="#">
+              <%= t("navbar.admin") %>
+            </a>
           </li>
+
         </ul>
       </div>
     </div>

@@ -29,3 +29,11 @@
 
 en:
   hello: "Hello world"
+
+  navbar:
+    brand: "Dashboard"
+    settings: "Settings"
+    preferences: "Preferences"
+    integrations: "Integrations"
+    features: "Features"
+    admin: "Admin"
