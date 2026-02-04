@@ -1,12 +1,21 @@
 <% content_for :title, t("accounts.edit.title") %>
 
-<h1><%= t("accounts.edit.heading") %></h1>
+<div class="container-fluid py-4 <%= @theme %>-settings edit-account-page">
+  <div class="row">
+    <div class="col-lg-8 col-xl-6">
 
-<%= render "form", account: @account %>
+      <div class="card shadow-sm edit-account-card">
+        <div class="card-body">
 
-<br>
+          <h4 class="mb-4">
+            <%= t("accounts.edit.heading") %>
+          </h4>
 
-<div>
-  <%= link_to t("accounts.edit.show"), @account %> |
-  <%= link_to t("accounts.edit.back"), accounts_path %>
+          <%= render "form", account: @account %>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>

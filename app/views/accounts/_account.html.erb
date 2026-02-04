@@ -1,21 +1,53 @@
-<div id="<%= dom_id account %>">
-  <p>
-    <strong><%= t("accounts.show.account_type") %>:</strong>
-    <%= account.accountType %>
-  </p>
+<div class="container-fluid py-4 <%= @theme %>-settings">
+  <div class="row">
+    <div class="col-lg-8 col-xl-6">
 
-  <p>
-    <strong><%= t("accounts.show.name") %>:</strong>
-    <%= account.name %>
-  </p>
+      <div class="card shadow-sm account-show-card">
+        <div class="card-body">
 
-  <p>
-    <strong><%= t("accounts.show.balance") %>:</strong>
-    <%= account.balance %>
-  </p>
+          <h4 class="mb-4">
+            <%= t("accounts.show.title", default: "Account Details") %>
+          </h4>
 
-  <p>
-    <strong><%= t("accounts.show.user") %>:</strong>
-    <%= account.user_id %>
-  </p>
+          <div class="account-show-item">
+            <span class="label">
+              <%= t("accounts.show.account_type") %>
+            </span>
+            <span class="value">
+              <%= account.accountType %>
+            </span>
+          </div>
+
+          <div class="account-show-item">
+            <span class="label">
+              <%= t("accounts.show.name") %>
+            </span>
+            <span class="value">
+              <%= account.name %>
+            </span>
+          </div>
+
+          <div class="account-show-item">
+            <span class="label">
+              <%= t("accounts.show.balance") %>
+            </span>
+            <span class="value balance">
+              <%= number_to_currency(account.balance) %>
+            </span>
+          </div>
+
+          <div class="account-show-item">
+            <span class="label">
+              <%= t("accounts.show.user") %>
+            </span>
+            <span class="value">
+              <%= account.user_id %>
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>

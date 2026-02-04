@@ -1,40 +1,96 @@
-<%= form_with(model: account) do |form| %>
-  <% if account.errors.any? %>
-    <div style="color: red">
-      <h2>
-        <%= pluralize(account.errors.count, t("errors.messages.error", default: "error")) %>
-        <%= t("errors.messages.prohibited") %>
-      </h2>
+<div class="container-fluid py-4 <%= @theme %>-settings">
+  <div class="row">
+    <div class="col-lg-8 col-xl-6">
 
-      <ul>
-        <% account.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+      <div class="card shadow-sm">
+        <div class="card-body">
+
+          <h4 class="mb-4">
+            <%= t("accounts.form.title", default: "Account Form") %>
+          </h4>
+
+          <%= form_with(model: account, local: true) do |form| %>
+
+            <% if account.errors.any? %>
+              <div class="alert alert-danger">
+                <strong>
+                  <%= pluralize(account.errors.count, t("errors.messages.error", default: "error")) %>
+                  <%= t("errors.messages.prohibited", default: "prohibited this record from being saved") %>
+                </strong>
+
+                <ul class="mb-0 mt-2">
+                  <% account.errors.each do |error| %>
+                    <li><%= error.full_message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+
+            <!-- Account Type -->
+            <div class="mb-3">
+              <%= form.label :accountType,
+                    t("accounts.form.account_type", default: "Account Type"),
+                    class: "form-label" %>
+
+              <%= form.text_field :accountType,
+                    class: "form-control" %>
+            </div>
+
+            <!-- Name -->
+            <div class="mb-3">
+              <%= form.label :name,
+                    t("accounts.form.name", default: "Name"),
+                    class: "form-label" %>
+
+              <%= form.text_field :name,
+                    class: "form-control" %>
+            </div>
+
+            <!-- Balance -->
+            <div class="mb-3">
+              <%= form.label :balance,
+                    t("accounts.form.balance", default: "Balance"),
+                    class: "form-label" %>
+
+              <%= form.number_field :balance,
+                    step: "0.01",
+                    class: "form-control" %>
+            </div>
+
+            <!-- User -->
+            <div class="mb-4">
+              <%= form.label :user_id,
+                    t("accounts.form.user", default: "User"),
+                    class: "form-label" %>
+
+              <%= form.text_field :user_id,
+                    class: "form-control",
+                    disabled: true %>
+            </div>
+
+
+            <div class="d-flex justify-content-between mt-4">
+              <%= link_to t("accounts.edit.back"),
+                    accounts_path,
+                    class: "btn btn-outline-secondary" %>
+
+              <div class="d-flex gap-2">
+                <% if account.persisted? %>
+                  <%= link_to t("accounts.edit.show"),
+                        account,
+                        class: "btn btn-outline-primary" %>
+                <% end %>
+
+                <%= form.submit t("actions.save", default: "Save"),
+                      class: "btn btn-primary px-4" %>
+              </div>
+            </div>
+
+          <% end %>
+
+        </div>
+      </div>
+
     </div>
-  <% end %>
-
-  <div>
-    <%= form.label :accountType, style: "display: block" %>
-    <%= form.text_field :accountType %>
   </div>
-
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div>
-    <%= form.label :balance, style: "display: block" %>
-    <%= form.number_field :balance %>
-  </div>
-
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
