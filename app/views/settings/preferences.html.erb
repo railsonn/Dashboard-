@@ -11,11 +11,17 @@
 
             <!-- Language -->
             <div class="mb-3">
-              <%= f.label :language, "Language", class: "form-label" %>
-              <%= f.select :language,
-                    [["Português", "pt"], ["English", "en"]],
-                    {},
-                    class: "form-select" %>
+              <label class="form-label d-block">Language</label>
+
+              <div class="btn-group" role="group">
+                <%= link_to "🇧🇷 Português",
+                    url_for(locale: "pt"),
+                    class: "btn #{I18n.locale == :pt ? 'btn-primary' : 'btn-outline-primary'}" %>
+
+                <%= link_to "🇺🇸 English",
+                    url_for(locale: "en"),
+                    class: "btn #{I18n.locale == :en ? 'btn-primary' : 'btn-outline-primary'}" %>
+              </div>
             </div>
 
             <!-- Currency -->
@@ -70,3 +76,5 @@
     </div>
   </div>
 </div>
+
+
