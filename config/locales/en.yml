@@ -63,6 +63,11 @@ en:
       delete: "Delete"
       confirm_delete: "Are you sure?"
 
+    show:
+      edit: "Edit this account"
+      back: "Back to accounts"
+      destroy: "Destroy this account"
+
     edit:
       title: "Editing account"
       heading: "Editing account"
@@ -75,6 +80,24 @@ en:
         create: "Create account"
         update: "Update account"
 
+  errors:
+    messages:
+      prohibited: "prohibited this record from being saved"
+
+
+  budgets:
+    show:
+      user: "User"
+      categories: "Categories"
+      limit_amount: "Limit amount"
+      month: "Month"
+      year: "Year"
+
+
+
+
+
+
   activerecord:
     models:
       account: "Account"
@@ -85,6 +108,17 @@ en:
         balance: "Balance"
         user_id: "User"
 
-  errors:
-    messages:
-      prohibited: "prohibited this record from being saved"
+      budget: "Budget"
+    attributes:
+      budget:
+        user_id: "User"
+        categories_id: "Category"
+        limit_amount: "Limit amount"
+        month: "Month"
+        year: "Year"
+
+
+  budgets:
+    form:
+      errors:
+        title: "%{count} error(s) prohibited this budget from being saved"

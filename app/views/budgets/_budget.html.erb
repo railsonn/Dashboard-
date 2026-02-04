@@ -1,27 +1,26 @@
 <div id="<%= dom_id budget %>">
   <p>
-    <strong>User:</strong>
+    <strong><%= t("budgets.show.user") %>:</strong>
     <%= budget.user_id %>
   </p>
 
   <p>
-    <strong>Categories:</strong>
+    <strong><%= t("budgets.show.categories") %>:</strong>
     <%= budget.category_id %>
   </p>
 
   <p>
-    <strong>Limit amount:</strong>
+    <strong><%= t("budgets.show.limit_amount") %>:</strong>
     <%= budget.limit_amount %>
   </p>
 
   <p>
-    <strong>Month:</strong>
+    <strong><%= t("budgets.show.month") %>:</strong>
     <%= budget.month %>
   </p>
 
   <p>
-    <strong>Year:</strong>
+    <strong><%= t("budgets.show.year") %>:</strong>
     <%= budget.year %>
   </p>
-
 </div>

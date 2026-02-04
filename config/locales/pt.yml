@@ -20,6 +20,10 @@ pt:
       name: "Nome"
       balance: "Saldo"
       user: "Usuário"  
+      edit: "Editar esta conta"
+      back: "Voltar para contas"
+      destroy: "Excluir esta conta"
+
 
     edit:
       title: "Editar conta"
@@ -54,6 +58,24 @@ pt:
         balance: "Saldo"
         user_id: "Usuário"
 
+      budget: "Orçamento"
+    attributes:
+      budget:
+        user_id: "Usuário"
+        categories_id: "Categoria"
+        limit_amount: "Valor limite"
+        month: "Mês"
+        year: "Ano"
+
   errors:
     messages:
       prohibited: "impediu que este registro fosse salvo"
+
+
+  budgets:
+    show:
+      user: "Usuário"
+      categories: "Categorias"
+      limit_amount: "Valor limite"
+      month: "Mês"
+      year: "Ano"
