@@ -132,6 +132,8 @@ body {
 
 
 
+
+
 /* =========================
    MAIN CONTENT
 ========================= */
@@ -322,20 +324,162 @@ body {
 
 
 
+/* =========================
+   ACCOUNT EDIT – FIX BG + HEIGHT
+========================= */
+
+/* Card herda o fundo do container pai */
+.light-settings .edit-account-card,
+.dark-settings .edit-account-card {
+  box-shadow: none;
+  border: none;
+}
+
+
+/* Garante que o edit não ultrapasse a tela */
+.light-settings,
+.dark-settings {
+  height: calc(100vh - 56px);
+  overflow: hidden;
+}
+
+/* =========================
+   TÍTULO HERDA BACKGROUND DO PAI
+========================= */
+.light-settings #account-page-title {
+  color: #0a0c16;
+  padding: 8px 0;    
+  font-size: 2rem;
+  position: relative;       
+  left: 20px;
+  top: 20px;
+}
+
+.dark-settings #account-page-title {
+  color: #6c757d;
+  padding: 8px 0;    
+  font-size: 2rem;
+  position: relative;       
+  left: 20px;
+  top: 20px;
+}
+
+
+.edit-account-card {
+  background-color: inherit;
+}
+
+/* Scroll interno, não na página inteira */
+.edit-account-card .card-body {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+/* =========================
+   SCROLL SOMENTE NO CONTEÚDO DIREITO
+========================= */
+
+/* Container principal da página */
+.light-settings,
+.dark-settings {
+  height: calc(100vh - 56px);
+  overflow: hidden; /* impede scroll geral */
+}
+
+/* Área de conteúdo (lado direito) */
+.light-settings .row,
+.dark-settings .row {
+  height: 100%;
+}
+
+/* Coluna direita rola */
+.light-settings .col-lg-8,
+.dark-settings .col-lg-8 {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 16px; /* espaço pro scrollbar */
+}
+
+/* Card não cria scroll próprio */
+.edit-account-card .card-body {
+  overflow: visible;
+  max-height: none;
+}
+
+/* =========================
+   SCROLL FINO — ACCOUNT EDIT
+========================= */
+
+.edit-account-page .col-lg-8 {
+  scrollbar-width: thin;              /* Firefox */
+  scrollbar-color: #adb5bd transparent;
+}
+
+.edit-account-page .col-lg-8::-webkit-scrollbar {
+  width: 6px;
+}
+
+.edit-account-page .col-lg-8::-webkit-scrollbar-thumb {
+  background-color: #adb5bd;
+  border-radius: 8px;
+}
+
+.edit-account-page .col-lg-8::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+/* Remove altura desnecessária da página */
+/* Card mais compacto */
+.edit-account-card .card-body {
+  padding: 1.25rem;
+}
+
+/* Menos espaço abaixo do título */
+.edit-account-card h4 {
+  margin-bottom: 1rem;
+}
+
+.light-settings .account-show-card,
+.light-settings .account-show-card .card-body {
+  background-color: transparent;
+  border: none;
+}
+
+.dark-settings .account-show-card,
+.dark-settings .account-show-card .card-body {
+  background-color: transparent;
+  border: none;
+}
+
+
+
+/* =========================
+   SCROLL FINO — BUDGET SHOW
+========================= */
+
+.budget-show-page .col-lg-8 {
+  scrollbar-width: thin;              /* Firefox */
+  scrollbar-color: #adb5bd transparent;
+}
+
+.budget-show-page .col-lg-8::-webkit-scrollbar {
+  width: 6px;
+}
+
+.budget-show-page .col-lg-8::-webkit-scrollbar-thumb {
+  background-color: #adb5bd;
+  border-radius: 8px;
+}
+
+.budget-show-page .col-lg-8::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
 
 
 /* Tables style */
-// .table-responsive table th {
-//   background-color: #0D1B2A;
-//   color: #ADB5BD;
-// }
-
-// .table-responsive table {
-//   border: 1px solid #1F2A44;
-// }
-
-
-
 
 /* =========================
    TABLE DARK
@@ -890,116 +1034,6 @@ body {
   color: #75b798;
   border-color: #1e4d3a;
 }
-
-/* =========================
-   ACCOUNT EDIT – FIX BG + HEIGHT
-========================= */
-
-/* Card herda o fundo do container pai */
-.light-settings .edit-account-card,
-.dark-settings .edit-account-card {
-  background-color: transparent;
-  box-shadow: none;
-  border: none;
-}
-
-/* Garante que o edit não ultrapasse a tela */
-.light-settings,
-.dark-settings {
-  height: calc(100vh - 56px);
-  overflow: hidden;
-}
-
-/* Scroll interno, não na página inteira */
-.edit-account-card .card-body {
-  max-height: calc(100vh - 200px);
-  overflow-y: auto;
-}
-
-/* =========================
-   SCROLL SOMENTE NO CONTEÚDO DIREITO
-========================= */
-
-/* Container principal da página */
-.light-settings,
-.dark-settings {
-  height: calc(100vh - 56px);
-  overflow: hidden; /* impede scroll geral */
-}
-
-/* Área de conteúdo (lado direito) */
-.light-settings .row,
-.dark-settings .row {
-  height: 100%;
-}
-
-/* Coluna direita rola */
-.light-settings .col-lg-8,
-.dark-settings .col-lg-8 {
-  height: 100%;
-  overflow-y: auto;
-  padding-right: 16px; /* espaço pro scrollbar */
-}
-
-/* Card não cria scroll próprio */
-.edit-account-card .card-body {
-  overflow: visible;
-  max-height: none;
-}
-
-/* =========================
-   SCROLL FINO — ACCOUNT EDIT
-========================= */
-
-.edit-account-page .col-lg-8 {
-  scrollbar-width: thin;              /* Firefox */
-  scrollbar-color: #adb5bd transparent;
-}
-
-.edit-account-page .col-lg-8::-webkit-scrollbar {
-  width: 6px;
-}
-
-.edit-account-page .col-lg-8::-webkit-scrollbar-thumb {
-  background-color: #adb5bd;
-  border-radius: 8px;
-}
-
-.edit-account-page .col-lg-8::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-
-/* Remove altura desnecessária da página */
-.edit-account-page {
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
-}
-
-/* Card mais compacto */
-.edit-account-card .card-body {
-  padding: 1.25rem;
-}
-
-/* Menos espaço abaixo do título */
-.edit-account-card h4 {
-  margin-bottom: 1rem;
-}
-
-.light-settings .account-show-card,
-.light-settings .account-show-card .card-body {
-  background-color: transparent;
-  border: none;
-}
-
-.dark-settings .account-show-card,
-.dark-settings .account-show-card .card-body {
-  background-color: transparent;
-  border: none;
-}
-
-
-
 
 
 

@@ -1,26 +1,62 @@
-<div id="<%= dom_id budget %>">
-  <p>
-    <strong><%= t("budgets.show.user") %>:</strong>
-    <%= budget.user_id %>
-  </p>
+<div class="container-fluid py-4 <%= @theme %>-settings budget-show-page">
+  <div class="row">
+    <div class="col-lg-8 col-xl-6">
 
-  <p>
-    <strong><%= t("budgets.show.categories") %>:</strong>
-    <%= budget.category_id %>
-  </p>
+      <div class="card shadow-sm account-show-card">
+        <div class="card-body">
 
-  <p>
-    <strong><%= t("budgets.show.limit_amount") %>:</strong>
-    <%= budget.limit_amount %>
-  </p>
+          <h4 class="mb-4">
+            <%= t("budgets.show.title", default: "Budget Details") %>
+          </h4>
 
-  <p>
-    <strong><%= t("budgets.show.month") %>:</strong>
-    <%= budget.month %>
-  </p>
+          <div id="<%= dom_id budget %>">
 
-  <p>
-    <strong><%= t("budgets.show.year") %>:</strong>
-    <%= budget.year %>
-  </p>
+            <p class="mb-3">
+              <strong><%= t("budgets.show.user") %>:</strong><br>
+              <span class="text-muted">
+                <%= budget.user_id %>
+              </span>
+            </p>
+
+            <p class="mb-3">
+              <strong><%= t("budgets.show.categories") %>:</strong><br>
+              <span class="text-muted">
+                <%= budget.category_id %>
+              </span>
+            </p>
+
+            <p class="mb-3">
+              <strong><%= t("budgets.show.limit_amount") %>:</strong><br>
+              <span class="fw-semibold">
+                <%= number_to_currency(budget.limit_amount) %>
+              </span>
+            </p>
+
+            <div class="row">
+              <div class="col-md-6">
+                <p class="mb-3">
+                  <strong><%= t("budgets.show.month") %>:</strong><br>
+                  <span class="text-muted">
+                    <%= budget.month %>
+                  </span>
+                </p>
+              </div>
+
+              <div class="col-md-6">
+                <p class="mb-3">
+                  <strong><%= t("budgets.show.year") %>:</strong><br>
+                  <span class="text-muted">
+                    <%= budget.year %>
+                  </span>
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
