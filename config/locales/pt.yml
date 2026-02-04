@@ -20,3 +20,23 @@ pt:
       name: "Nome"
       balance: "Saldo"
       user: "Usuário"  
+
+  helpers:
+    submit:
+      account:
+        create: "Criar conta"
+        update: "Atualizar conta"
+
+  activerecord:
+    models:
+      account: "Conta"
+    attributes:
+      account:
+        accountType: "Tipo da conta"
+        name: "Nome"
+        balance: "Saldo"
+        user_id: "Usuário"
+
+  errors:
+    messages:
+      prohibited: "impediu que este registro fosse salvo"

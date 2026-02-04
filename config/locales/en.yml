@@ -51,3 +51,23 @@ en:
       name: "Name"
       balance: "Balance"
       user: "User"
+
+  helpers:
+    submit:
+      account:
+        create: "Create account"
+        update: "Update account"
+
+  activerecord:
+    models:
+      account: "Account"
+    attributes:
+      account:
+        accountType: "Account type"
+        name: "Name"
+        balance: "Balance"
+        user_id: "User"
+
+  errors:
+    messages:
+      prohibited: "prohibited this record from being saved"
