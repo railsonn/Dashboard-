@@ -6,3 +6,10 @@ pt:
     integrations: "Integrações"
     features: "Funcionalidades"
     admin: "Administração"
+
+  sidebar:
+    dashboard: "Dashboard"
+    accounts: "Contas"
+    transactions: "Transações"
+    budgets: "Orçamentos"
+    invoices: "Faturas"

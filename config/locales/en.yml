@@ -37,3 +37,10 @@ en:
     integrations: "Integrations"
     features: "Features"
     admin: "Admin"
+
+  sidebar:
+    dashboard: "Dashboard"
+    accounts: "Accounts"
+    transactions: "Transactions"
+    budgets: "Budgets"
+    invoices: "Invoices"
