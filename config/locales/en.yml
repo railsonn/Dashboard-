@@ -140,3 +140,27 @@ en:
       edit: "Edit"
       delete: "Delete"
       confirm: "Are you sure?"
+
+  features:
+    title: "Features"
+    subtitle: "Explore the powerful features of our financial management system"
+
+    cards:
+      accounts:
+        title: "Manage Accounts"
+        description: "Easily manage your bank accounts and track balances."
+      transactions:
+        title: "Track Transactions"
+        description: "Record and categorize your income and expenses."
+      budgets:
+        title: "Set Budgets"
+        description: "Plan and monitor your monthly budgets."
+      reports:
+        title: "View Reports"
+        description: "View detailed financial reports and charts."
+
+    learn_more: "Learn more"
+
+    cta:
+      title: "Ready to take control of your finances?"
+      button: "Get Started"

@@ -96,3 +96,27 @@ pt:
       heading: "Editando orçamento"
       show: "Ver este orçamento"
       back: "Voltar para orçamentos"
+
+  features:
+    title: "Funcionalidades"
+    subtitle: "Explore os poderosos recursos do nosso sistema de gestão financeira"
+
+    cards:
+      accounts:
+        title: "Gerenciar Contas"
+        description: "Gerencie facilmente suas contas bancárias e acompanhe os saldos."
+      transactions:
+        title: "Controlar Transações"
+        description: "Registre e categorize suas receitas e despesas."
+      budgets:
+        title: "Definir Orçamentos"
+        description: "Planeje e acompanhe seus orçamentos mensais."
+      reports:
+        title: "Visualizar Relatórios"
+        description: "Veja relatórios financeiros detalhados e gráficos."
+
+    learn_more: "Saiba mais"
+
+    cta:
+      title: "Pronto para assumir o controle das suas finanças?"
+      button: "Começar agora"

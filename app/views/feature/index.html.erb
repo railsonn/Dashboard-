@@ -1,25 +1,23 @@
 <div id="content-diretor-<%= @theme %>">
   <div id="container-feature">
-    <!-- content -->
+
     <div id="div-title-<%= @theme %>">
-      <h1>Features</h1>
-      <p>Explore the powerfull features of our financial management system</p>
+      <h1><%= t("features.title") %></h1>
+      <p><%= t("features.subtitle") %></p>
       <hr>
     </div>
 
-    
-    <!-- Cards -->
     <div class="row g-4">
       <!-- Accounts -->
       <div class="col-sm-6 col-lg-3">
         <div class="card h-100 shadow-sm border-0">
           <div class="card-body-<%= @theme %> text-center">
             <i class="bi bi-bank fs-1 text-primary mb-3"></i>
-            <h5 class="card-title">Manage Accounts</h5>
+            <h5 class="card-title"><%= t("features.cards.accounts.title") %></h5>
             <p class="card-text">
-              Easily manage your bank accounts and track balances.
+              <%= t("features.cards.accounts.description") %>
             </p>
-            <%= link_to "Learn more", accounts_path, class: "btn btn-link" %>
+            <%= link_to t("features.learn_more"), accounts_path, class: "btn btn-link" %>
           </div>
         </div>
       </div>
@@ -29,11 +27,11 @@
         <div class="card h-100 shadow-sm border-0">
           <div class="card-body-<%= @theme %> text-center">
             <i class="bi bi-arrow-left-right fs-1 text-success mb-3"></i>
-            <h5 class="card-title">Track Transactions</h5>
+            <h5 class="card-title"><%= t("features.cards.transactions.title") %></h5>
             <p class="card-text">
-              Record and categorize your income and expenses.
+              <%= t("features.cards.transactions.description") %>
             </p>
-            <%= link_to "Learn more", transactions_path, class: "btn btn-link" %>
+            <%= link_to t("features.learn_more"), transactions_path, class: "btn btn-link" %>
           </div>
         </div>
       </div>
@@ -43,25 +41,25 @@
         <div class="card h-100 shadow-sm border-0">
           <div class="card-body-<%= @theme %> text-center">
             <i class="bi bi-pie-chart fs-1 text-warning mb-3"></i>
-            <h5 class="card-title">Set Budgets</h5>
+            <h5 class="card-title"><%= t("features.cards.budgets.title") %></h5>
             <p class="card-text">
-              Plan and monitor your monthly budgets.
+              <%= t("features.cards.budgets.description") %>
             </p>
-            <%= link_to "Learn more", budgets_path, class: "btn btn-link" %>
+            <%= link_to t("features.learn_more"), budgets_path, class: "btn btn-link" %>
           </div>
         </div>
       </div>
 
       <!-- Reports -->
-      <div class="col-sm-6 col-lg-3">  
+      <div class="col-sm-6 col-lg-3">
         <div class="card h-100 shadow-sm border-0">
           <div class="card-body-<%= @theme %> text-center">
             <i class="bi bi-graph-up fs-1 text-info mb-3"></i>
-            <h5 class="card-title">View Reports</h5>
+            <h5 class="card-title"><%= t("features.cards.reports.title") %></h5>
             <p class="card-text">
-              View detailed financial reports and charts.
+              <%= t("features.cards.reports.description") %>
             </p>
-            <%= link_to "Learn more", report_index_path, class: "btn btn-link" %>
+            <%= link_to t("features.learn_more"), report_index_path, class: "btn btn-link" %>
           </div>
         </div>
       </div>
@@ -69,13 +67,12 @@
 
     <hr>
 
-      <!-- CTA -->
-      <div class="text-center mt-5">
-        <h5 class="fw-bold mb-3 text-get-<%= @theme %>">
-          Ready to take control of your finances?
-        </h5>
-        <%= link_to "Get Started", root_path, class: "btn btn-primary btn-lg" %>
-      </div>
+    <div class="text-center mt-5">
+      <h5 class="fw-bold mb-3 text-get-<%= @theme %>">
+        <%= t("features.cta.title") %>
+      </h5>
+      <%= link_to t("features.cta.button"), root_path, class: "btn btn-primary btn-lg" %>
     </div>
+
   </div>
 </div>
