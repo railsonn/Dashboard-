@@ -346,7 +346,7 @@ body {
 /* =========================
    TÍTULO HERDA BACKGROUND DO PAI
 ========================= */
-.light-settings #account-page-title {
+.light-settings #account-edit-title {
   color: #0a0c16;
   padding: 8px 0;    
   font-size: 2rem;
@@ -355,7 +355,7 @@ body {
   top: 20px;
 }
 
-.dark-settings #account-page-title {
+.dark-settings #account-edit-title {
   color: #6c757d;
   padding: 8px 0;    
   font-size: 2rem;
@@ -450,6 +450,26 @@ body {
 .dark-settings .account-show-card .card-body {
   background-color: transparent;
   border: none;
+}
+
+
+/* page account show */
+.light-settings #account-show-title {
+  color: #0a0c16;
+  padding: 8px 0;    
+  font-size: 2rem;
+  position: relative;       
+  left: 20px;
+  top: 20px;
+}
+
+.dark-settings #account-show-title {
+  color: #6c757d;
+  padding: 8px 0;    
+  font-size: 2rem;
+  position: relative;       
+  left: 20px;
+  top: 20px;
 }
 
 

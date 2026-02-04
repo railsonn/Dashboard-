@@ -45,6 +45,24 @@
             </span>
           </div>
 
+                <div class="d-flex justify-content-between align-items-center mt-4">
+        <div class="d-flex gap-2">
+          <%= link_to t("accounts.show.edit"),
+                edit_account_path(@account),
+                class: "btn btn-outline-primary" %>
+
+          <%= link_to t("accounts.show.back"),
+                accounts_path,
+                class: "btn btn-outline-secondary" %>
+        </div>
+
+        <%= button_to t("accounts.show.destroy"),
+              @account,
+              method: :delete,
+              data: { confirm: t("accounts.show.confirm", default: "Are you sure?") },
+              class: "btn btn-outline-danger" %>
+      </div>
+
         </div>
       </div>
 
