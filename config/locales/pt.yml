@@ -189,55 +189,6 @@ pt:
       show: "Ver esta fatura"
       back: "Voltar para faturas"
 
-  transactions:
-    form:
-      errors_title: "%{count} erro(s) impediram que esta transação fosse salva"
-      transaction_type: "Tipo da transação"
-      amount: "Valor"
-      description: "Descrição"
-      transaction_date: "Data da transação"
-      user_id: "Usuário"
-      account_id: "Conta"
-      submit: "Salvar transação"
-
-    table:
-      id: "ID"
-      transaction_date: "Data da transação"
-      description: "Descrição"
-      amount: "Valor"
-      type: "Tipo"
-      actions: "Ações"
-
-      view: "Ver"
-      edit: "Editar"
-      delete: "Excluir"
-      confirm_delete: "Tem certeza?"
-
-      credit: "Crédito"
-      debit: "Débito"
-
-    show:
-      transaction_type: "Tipo da transação"
-      amount: "Valor"
-      description: "Descrição"
-      transaction_date: "Data da transação"
-      user: "Usuário"
-      account: "Conta"
-      notice: "Transação atualizada com sucesso."
-      edit: "Editar esta transação"
-      back: "Voltar para transações"
-      destroy: "Excluir esta transação"
-      confirm_destroy: "Tem certeza?"
-
-      credit: "Crédito"
-      debit: "Débito"
-
-    edit:
-      title: "Editando transação"
-      heading: "Editando transação"
-      show: "Ver esta transação"
-      back: "Voltar para transações"
-
 
   reports:
     financial_evolution: "Evolução Financeira"
