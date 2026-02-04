@@ -208,6 +208,55 @@ en:
       show: "Show this invoice"
       back: "Back to invoices"
 
+  transactions:
+    form:
+      errors_title: "%{count} error(s) prohibited this transaction from being saved"
+      transaction_type: "Transaction type"
+      amount: "Amount"
+      description: "Description"
+      transaction_date: "Transaction date"
+      user_id: "User"
+      account_id: "Account"
+      submit: "Save transaction"
+
+    table:
+      id: "ID"
+      transaction_date: "Transaction date"
+      description: "Description"
+      amount: "Amount"
+      type: "Type"
+      actions: "Actions"
+
+      view: "View"
+      edit: "Edit"
+      delete: "Delete"
+      confirm_delete: "Are you sure?"
+
+      credit: "Credit"
+      debit: "Debit"
+
+    show:
+      transaction_type: "Transaction type"
+      amount: "Amount"
+      description: "Description"
+      transaction_date: "Transaction date"
+      user: "User"
+      account: "Account"
+      notice: "Transaction was successfully updated."
+      edit: "Edit this transaction"
+      back: "Back to transactions"
+      destroy: "Destroy this transaction"
+      confirm_destroy: "Are you sure?"
+
+      credit: "Credit"
+      debit: "Debit"
+
+    edit:
+      title: "Editing transaction"
+      heading: "Editing transaction"
+      show: "Show this transaction"
+      back: "Back to transactions"
+
 
   reports:
     financial_evolution: "Financial Evolution"
