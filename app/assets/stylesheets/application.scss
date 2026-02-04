@@ -986,6 +986,18 @@ body {
   margin-bottom: 1rem;
 }
 
+.light-settings .account-show-card,
+.light-settings .account-show-card .card-body {
+  background-color: transparent;
+  border: none;
+}
+
+.dark-settings .account-show-card,
+.dark-settings .account-show-card .card-body {
+  background-color: transparent;
+  border: none;
+}
+
 
 
 
