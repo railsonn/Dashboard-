@@ -120,3 +120,24 @@ pt:
     cta:
       title: "Pronto para assumir o controle das suas finanças?"
       button: "Começar agora"
+
+  dashboard:
+    cards:
+      total_balance: "Saldo Total"
+      income_month: "Receitas do Mês"
+      expenses_month: "Despesas do Mês"
+      open_invoices: "Faturas em Aberto"
+
+    charts:
+      income_vs_expenses: "Receitas x Despesas"
+      income: "Receitas"
+      expenses: "Despesas"
+      balance: "Saldo"
+      distribution: "Distribuição Financeira"
+      total: "Total"
+
+    legend:
+      income: "Receitas"
+      expenses: "Despesas"
+      balance: "Saldo"
+      open_invoices: "Faturas em Aberto"

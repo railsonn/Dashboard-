@@ -164,3 +164,24 @@ en:
     cta:
       title: "Ready to take control of your finances?"
       button: "Get Started"
+
+  dashboard:
+    cards:
+      total_balance: "Total Balance"
+      income_month: "Income This Month"
+      expenses_month: "Expenses This Month"
+      open_invoices: "Open Invoices"
+
+    charts:
+      income_vs_expenses: "Income vs Expenses"
+      income: "Income"
+      expenses: "Expenses"
+      balance: "Balance"
+      distribution: "Financial Distribution"
+      total: "Total"
+
+    legend:
+      income: "Income"
+      expenses: "Expenses"
+      balance: "Balance"
+      open_invoices: "Open Invoices"
