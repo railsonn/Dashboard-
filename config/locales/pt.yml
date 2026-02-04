@@ -21,6 +21,12 @@ pt:
       balance: "Saldo"
       user: "Usuário"  
 
+    edit:
+      title: "Editar conta"
+      heading: "Editando conta"
+      show: "Ver esta conta"
+      back: "Voltar para contas"
+
     table:
       id: "ID"
       name: "Nome"

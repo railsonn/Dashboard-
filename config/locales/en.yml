@@ -63,6 +63,12 @@ en:
       delete: "Delete"
       confirm_delete: "Are you sure?"
 
+    edit:
+      title: "Editing account"
+      heading: "Editing account"
+      show: "Show this account"
+      back: "Back to accounts"
+
   helpers:
     submit:
       account:
