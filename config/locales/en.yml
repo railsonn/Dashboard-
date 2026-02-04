@@ -221,3 +221,15 @@ en:
       paid: "Paid"
       pending: "Pending"
       overdue: "Overdue"
+
+    edit:
+      title: "Editing invoice"
+      heading: "Editing invoice"
+      show: "Show this invoice"
+      back: "Back to invoices"
+
+    show:
+      edit: "Edit this invoice"
+      back: "Back to invoices"
+      destroy: "Destroy this invoice"
+      notice: "Invoice was successfully updated."

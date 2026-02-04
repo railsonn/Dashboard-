@@ -159,6 +159,11 @@ pt:
       due_date: "Data de vencimento"
       status: "Status"
       account: "Conta"
+      
+      edit: "Editar esta fatura"
+      back: "Voltar para faturas"
+      destroy: "Excluir esta fatura"
+      notice: "Fatura atualizada com sucesso."
 
     table:
       id: "ID"
@@ -177,4 +182,11 @@ pt:
       paid: "Pago"
       pending: "Pendente"
       overdue: "Vencido"
+
+    edit:
+      title: "Editando fatura"
+      heading: "Editando fatura"
+      show: "Ver esta fatura"
+      back: "Voltar para faturas"
+
       
