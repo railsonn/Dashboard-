@@ -1,22 +1,21 @@
 <div id="<%= dom_id account %>">
   <p>
-    <strong>Accounttype:</strong>
+    <strong><%= t("accounts.show.account_type") %>:</strong>
     <%= account.accountType %>
   </p>
 
   <p>
-    <strong>Name:</strong>
+    <strong><%= t("accounts.show.name") %>:</strong>
     <%= account.name %>
   </p>
 
   <p>
-    <strong>Balance:</strong>
+    <strong><%= t("accounts.show.balance") %>:</strong>
     <%= account.balance %>
   </p>
 
   <p>
-    <strong>User:</strong>
+    <strong><%= t("accounts.show.user") %>:</strong>
     <%= account.user_id %>
   </p>
-
 </div>

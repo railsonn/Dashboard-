@@ -44,3 +44,10 @@ en:
     transactions: "Transactions"
     budgets: "Budgets"
     invoices: "Invoices"
+
+  accounts:
+    show:
+      account_type: "Account type"
+      name: "Name"
+      balance: "Balance"
+      user: "User"

@@ -13,3 +13,10 @@ pt:
     transactions: "Transações"
     budgets: "Orçamentos"
     invoices: "Faturas"
+
+  accounts:
+    show:
+      account_type: "Tipo da conta"
+      name: "Nome"
+      balance: "Saldo"
+      user: "Usuário"  
