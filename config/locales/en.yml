@@ -52,6 +52,17 @@ en:
       balance: "Balance"
       user: "User"
 
+    table:
+      id: "ID"
+      name: "Name"
+      balance: "Balance"
+      type: "Type"
+      actions: "Actions"
+      view: "View"
+      edit: "Edit"
+      delete: "Delete"
+      confirm_delete: "Are you sure?"
+
   helpers:
     submit:
       account:

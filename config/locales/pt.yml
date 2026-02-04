@@ -21,6 +21,17 @@ pt:
       balance: "Saldo"
       user: "Usuário"  
 
+    table:
+      id: "ID"
+      name: "Nome"
+      balance: "Saldo"
+      type: "Tipo"
+      actions: "Ações"
+      view: "Ver"
+      edit: "Editar"
+      delete: "Excluir"
+      confirm_delete: "Tem certeza?"
+
   helpers:
     submit:
       account:
