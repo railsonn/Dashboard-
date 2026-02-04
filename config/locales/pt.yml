@@ -159,7 +159,7 @@ pt:
       due_date: "Data de vencimento"
       status: "Status"
       account: "Conta"
-      
+
       edit: "Editar esta fatura"
       back: "Voltar para faturas"
       destroy: "Excluir esta fatura"
@@ -188,5 +188,42 @@ pt:
       heading: "Editando fatura"
       show: "Ver esta fatura"
       back: "Voltar para faturas"
+
+
+  reports:
+    financial_evolution: "Evolução Financeira"
+    income: "Receitas"
+    expenses: "Despesas"
+    balance: "Saldo"
+    open_invoices: "Faturas em aberto"
+
+    monthly_comparison: "Receitas x Despesas (Mensal)"
+
+    months:
+      jan: "Jan"
+      feb: "Fev"
+      mar: "Mar"
+      apr: "Abr"
+      may: "Mai"
+
+
+  settings:
+    title: "Preferências"
+    language: "Idioma"
+    currency: "Moeda"
+    theme: "Tema"
+    theme_light: "Claro"
+    theme_dark: "Escuro"
+    date_format: "Formato de Data"
+    number_format: "Formato de Número"
+    save: "Salvar Alterações"
+
+    languages:
+      pt: "Português"
+      en: "Inglês"
+
+    currencies:
+      usd: "USD - Dólar Americano"
+      brl: "BRL - Real Brasileiro"
 
       

@@ -1,12 +1,14 @@
 <div id="mainContent-report">
   <div class="card-<%= @theme %> shadow-sm" id="card-primary">
     <div class="card-body" id="card-secondary">
-      <h6 class="mb-3" id="title-<%= @theme %>">Evolução Financeira</h6>
+      <h6 class="mb-3" id="title-<%= @theme %>">
+        <%= t("reports.financial_evolution") %>
+      </h6>
 
       <div class="line-chart-wrapper-<%= @theme %>">
         <svg viewBox="0 0 520 280" preserveAspectRatio="none" class="w-100 h-100">
 
-          <!-- ===== EIXO Y (valores) ===== -->
+          <!-- ===== EIXO Y ===== -->
           <text x="0" y="50"  fill="#8a8fa3" font-size="10">8k</text>
           <text x="0" y="90"  fill="#8a8fa3" font-size="10">6k</text>
           <text x="0" y="130" fill="#8a8fa3" font-size="10">4k</text>
@@ -21,21 +23,10 @@
           <line x1="30" y1="210" x2="500" y2="210" stroke="#2a2f45"/>
 
           <!-- ===== RECEITAS ===== -->
-          <polyline
-            fill="none"
-            stroke="#0d6efd"
-            stroke-width="2.5"
-            points="50,70 150,60 250,50 350,55 450,45"
-          />
+          <polyline fill="none" stroke="#0d6efd" stroke-width="2.5"
+            points="50,70 150,60 250,50 350,55 450,45" />
 
-          <!-- pontos na linha da reta do grafico -->
-          <circle cx="50"  cy="70"  r="4" fill="#0d6efd"/>
-          <circle cx="150" cy="60"  r="4" fill="#0d6efd"/>
-          <circle cx="250" cy="50"  r="4" fill="#0d6efd"/>
-          <circle cx="350" cy="55"  r="4" fill="#0d6efd"/>
-          <circle cx="450" cy="45"  r="4" fill="#0d6efd"/>
-
-          <!-- numeros flutuantes indicando o valor do ponto -->
+          <!-- pontos -->
           <circle cx="50" cy="70" r="4" fill="#0d6efd"/>
           <text x="50" y="62" text-anchor="middle" font-size="9" fill="#0d6efd">7k</text>
 
@@ -51,23 +42,10 @@
           <circle cx="450" cy="45" r="4" fill="#0d6efd"/>
           <text x="450" y="37" text-anchor="middle" font-size="9" fill="#0d6efd">8.2k</text>
 
-
           <!-- ===== DESPESAS ===== -->
-          <polyline
-            fill="none"
-            stroke="#dc3545"
-            stroke-width="2.5"
-            points="50,110 150,120 250,130 350,125 450,140"
-          />
+          <polyline fill="none" stroke="#dc3545" stroke-width="2.5"
+            points="50,110 150,120 250,130 350,125 450,140" />
 
-          <!-- pontos na linha da reta do grafico -->
-          <circle cx="50"  cy="110" r="4" fill="#dc3545"/>
-          <circle cx="150" cy="120" r="4" fill="#dc3545"/>
-          <circle cx="250" cy="130" r="4" fill="#dc3545"/>
-          <circle cx="350" cy="125" r="4" fill="#dc3545"/>
-          <circle cx="450" cy="140" r="4" fill="#dc3545"/>
-
-          <!-- numeros flutuantes indicando o valor do ponto -->
           <circle cx="50" cy="110" r="4" fill="#dc3545"/>
           <text x="50" y="102" text-anchor="middle" font-size="9" fill="#dc3545">5k</text>
 
@@ -83,23 +61,10 @@
           <circle cx="450" cy="140" r="4" fill="#dc3545"/>
           <text x="450" y="132" text-anchor="middle" font-size="9" fill="#dc3545">3.5k</text>
 
-
           <!-- ===== SALDO ===== -->
-          <polyline
-            fill="none"
-            stroke="#198754"
-            stroke-width="2.5"
-            points="50,160 150,150 250,140 350,145 450,135"
-          />
+          <polyline fill="none" stroke="#198754" stroke-width="2.5"
+            points="50,160 150,150 250,140 350,145 450,135" />
 
-          <!-- pontos na linha da reta do grafico -->
-          <circle cx="50"  cy="160" r="4" fill="#198754"/>
-          <circle cx="150" cy="150" r="4" fill="#198754"/>
-          <circle cx="250" cy="140" r="4" fill="#198754"/>
-          <circle cx="350" cy="145" r="4" fill="#198754"/>
-          <circle cx="450" cy="135" r="4" fill="#198754"/>
-
-          <!-- numeros flutuantes indicando o valor do ponto -->
           <circle cx="50" cy="160" r="4" fill="#198754"/>
           <text x="50" y="152" text-anchor="middle" font-size="9" fill="#198754">3k</text>
 
@@ -115,23 +80,10 @@
           <circle cx="450" cy="135" r="4" fill="#198754"/>
           <text x="450" y="127" text-anchor="middle" font-size="9" fill="#198754">4.2k</text>
 
-
           <!-- ===== OPEN INVOICES ===== -->
-          <polyline
-            fill="none"
-            stroke="#ffc107"
-            stroke-width="2.5"
-            points="50,190 150,185 250,180 350,175 450,170"
-          />
+          <polyline fill="none" stroke="#ffc107" stroke-width="2.5"
+            points="50,190 150,185 250,180 350,175 450,170" />
 
-          <!-- pontos na linha da reta do grafico -->
-          <circle cx="50"  cy="190" r="4" fill="#ffc107"/>
-          <circle cx="150" cy="185" r="4" fill="#ffc107"/>
-          <circle cx="250" cy="180" r="4" fill="#ffc107"/>
-          <circle cx="350" cy="175" r="4" fill="#ffc107"/>
-          <circle cx="450" cy="170" r="4" fill="#ffc107"/>
-
-          <!-- numeros flutuantes indicando o valor do ponto -->
           <circle cx="50" cy="190" r="4" fill="#ffc107"/>
           <text x="50" y="182" text-anchor="middle" font-size="9" fill="#ffc107">1k</text>
 
@@ -147,89 +99,76 @@
           <circle cx="450" cy="170" r="4" fill="#ffc107"/>
           <text x="450" y="162" text-anchor="middle" font-size="9" fill="#ffc107">1.8k</text>
 
-
-          <!-- ===== MESES (EIXO X) ===== -->
-          <text x="45"  y="260" fill="#8a8fa3" font-size="10">Jan</text>
-          <text x="145" y="260" fill="#8a8fa3" font-size="10">Fev</text>
-          <text x="245" y="260" fill="#8a8fa3" font-size="10">Mar</text>
-          <text x="345" y="260" fill="#8a8fa3" font-size="10">Abr</text>
-          <text x="445" y="260" fill="#8a8fa3" font-size="10">Mai</text>
-
+          <!-- ===== MESES ===== -->
+          <text x="45"  y="260" fill="#8a8fa3" font-size="10"><%= t("reports.months.jan") %></text>
+          <text x="145" y="260" fill="#8a8fa3" font-size="10"><%= t("reports.months.feb") %></text>
+          <text x="245" y="260" fill="#8a8fa3" font-size="10"><%= t("reports.months.mar") %></text>
+          <text x="345" y="260" fill="#8a8fa3" font-size="10"><%= t("reports.months.apr") %></text>
+          <text x="445" y="260" fill="#8a8fa3" font-size="10"><%= t("reports.months.may") %></text>
         </svg>
       </div>
 
-      <!-- Legenda -->
+      <!-- ===== LEGENDA ===== -->
       <div class="d-flex flex-wrap gap-3 mt-3 small" id="div-text-legend">
         <div>
           <span class="text-primary fw-semibold">●</span>
-          <span class="text-legend-<%= @theme %>">Receitas</span>
+          <span class="text-legend-<%= @theme %>"><%= t("reports.income") %></span>
         </div>
 
         <div>
           <span class="text-danger fw-semibold">●</span>
-          <span class="text-legend-<%= @theme %>">Despesas</span>
+          <span class="text-legend-<%= @theme %>"><%= t("reports.expenses") %></span>
         </div>
 
         <div>
           <span class="text-success fw-semibold">●</span>
-          <span class="text-legend-<%= @theme %>">Saldo</span>
+          <span class="text-legend-<%= @theme %>"><%= t("reports.balance") %></span>
         </div>
 
         <div>
           <span class="text-warning fw-semibold">●</span>
-          <span class="text-legend-<%= @theme %>">Open invoices</span>
+          <span class="text-legend-<%= @theme %>"><%= t("reports.open_invoices") %></span>
         </div>
       </div>
-
     </div>
 
-
-    <!-- Grafico de barras -->
-
-
+    <!-- ===== GRÁFICO DE BARRAS ===== -->
     <div class="card-body" id="card-grafico-barra">
-      <h6 class="mb-3" id="title-<%= @theme %>">Receitas x Despesas (Mensal)</h6>
+      <h6 class="mb-3" id="title-<%= @theme %>">
+        <%= t("reports.monthly_comparison") %>
+      </h6>
 
       <div class="bar-chart-wrapper-<%= @theme %> d-flex justify-content-around align-items-end">
 
-        <!-- ===== JANEIRO ===== -->
         <div class="text-center">
           <div class="bars">
-            <!-- Receita -->
             <div class="bar receita" style="height: 100%;">
               <small>R$ 24.923</small>
             </div>
-
-            <!-- Despesa -->
             <div class="bar despesa" style="height: 55%;">
               <small>R$ 13.754</small>
             </div>
           </div>
-          <span class="month">Jan</span>
+          <span class="month"><%= t("reports.months.jan") %></span>
         </div>
 
-        <!-- ===== FEVEREIRO ===== -->
         <div class="text-center">
           <div class="bars">
-            <!-- Receita -->
             <div class="bar receita" style="height: 60%;">
               <small>R$ 15.000</small>
             </div>
-
-            <!-- Despesa -->
             <div class="bar despesa" style="height: 80%;">
               <small>R$ 20.000</small>
             </div>
           </div>
-          <span class="month">Fev</span>
+          <span class="month"><%= t("reports.months.feb") %></span>
         </div>
 
       </div>
 
-      <!-- Legenda -->
       <div class="d-flex gap-4 justify-content-center mt-4 small">
-        <span class="text-primary fw-semibold">■ Receitas</span>
-        <span class="text-danger fw-semibold">■ Despesas</span>
+        <span class="text-primary fw-semibold">■ <%= t("reports.income") %></span>
+        <span class="text-danger fw-semibold">■ <%= t("reports.expenses") %></span>
       </div>
     </div>
   </div>

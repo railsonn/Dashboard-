@@ -1,24 +1,23 @@
 <div class="container-fluid py-4 <%= @theme %>-settings">
   <div class="row">
     <div class="col-lg-8 col-xl-6">
-
       <div class="card shadow-sm">
         <div class="card-body">
 
-          <h4 class="mb-4">Preferences</h4>
+          <h4 class="mb-4"><%= t("settings.title") %></h4>
 
           <%= form_with url: settings_update_preferences_path, method: :patch, local: true do |f| %>
 
             <!-- Language -->
             <div class="mb-3">
-              <label class="form-label d-block">Language</label>
+              <label class="form-label d-block"><%= t("settings.language") %></label>
 
               <div class="btn-group" role="group">
-                <%= link_to "🇧🇷 Português",
+                <%= link_to "🇧🇷 #{t("settings.languages.pt")}",
                     url_for(locale: "pt"),
                     class: "btn #{I18n.locale == :pt ? 'btn-primary' : 'btn-outline-primary'}" %>
 
-                <%= link_to "🇺🇸 English",
+                <%= link_to "🇺🇸 #{t("settings.languages.en")}",
                     url_for(locale: "en"),
                     class: "btn #{I18n.locale == :en ? 'btn-primary' : 'btn-outline-primary'}" %>
               </div>
@@ -26,31 +25,32 @@
 
             <!-- Currency -->
             <div class="mb-3">
-              <%= f.label :currency, "Currency", class: "form-label" %>
+              <%= f.label :currency, t("settings.currency"), class: "form-label" %>
               <%= f.select :currency,
-                    [["USD - US Dollar", "USD"], ["BRL - Brazilian Real", "BRL"]],
+                    [[t("settings.currencies.usd"), "USD"],
+                     [t("settings.currencies.brl"), "BRL"]],
                     {},
                     class: "form-select" %>
             </div>
 
             <!-- Theme -->
             <div class="mb-4">
-              <label class="form-label d-block">Theme</label>
+              <label class="form-label d-block"><%= t("settings.theme") %></label>
 
               <div class="form-check form-check-inline">
                 <%= f.radio_button :theme, "light", class: "form-check-input", checked: (@theme == "light") %>
-                <%= f.label :theme_light, "Light", class: "form-check-label"  %>
+                <%= f.label :theme_light, t("settings.theme_light"), class: "form-check-label" %>
               </div>
 
               <div class="form-check form-check-inline">
                 <%= f.radio_button :theme, "dark", class: "form-check-input", checked: (@theme == "dark") %>
-                <%= f.label :theme_dark, "Dark", class: "form-check-label" %>
+                <%= f.label :theme_dark, t("settings.theme_dark"), class: "form-check-label" %>
               </div>
             </div>
 
             <!-- Date Format -->
             <div class="mb-3">
-              <%= f.label :date_format, "Date Format", class: "form-label" %>
+              <%= f.label :date_format, t("settings.date_format"), class: "form-label" %>
               <%= f.select :date_format,
                     [["DD/MM/YYYY", "dd/mm/yyyy"], ["MM/DD/YYYY", "mm/dd/yyyy"]],
                     {},
@@ -59,7 +59,7 @@
 
             <!-- Number Format -->
             <div class="mb-4">
-              <%= f.label :number_format, "Number Format", class: "form-label" %>
+              <%= f.label :number_format, t("settings.number_format"), class: "form-label" %>
               <%= f.select :number_format,
                     [["1.234,56", "pt"], ["1,234.56", "en"]],
                     {},
@@ -67,7 +67,7 @@
             </div>
 
             <div class="d-flex justify-content-end">
-              <%= f.submit "Save Changes", class: "btn btn-primary px-4" %>
+              <%= f.submit t("settings.save"), class: "btn btn-primary px-4" %>
             </div>
 
           <% end %>
@@ -76,5 +76,3 @@
     </div>
   </div>
 </div>
-
-

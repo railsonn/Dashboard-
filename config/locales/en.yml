@@ -94,30 +94,6 @@ en:
       year: "Year"
 
 
-
-
-
-
-  activerecord:
-    models:
-      account: "Account"
-    attributes:
-      account:
-        accountType: "Account type"
-        name: "Name"
-        balance: "Balance"
-        user_id: "User"
-
-      budget: "Budget"
-    attributes:
-      budget:
-        user_id: "User"
-        categories_id: "Category"
-        limit_amount: "Limit amount"
-        month: "Month"
-        year: "Year"
-
-
   budgets:
     form:
       errors:
@@ -203,6 +179,10 @@ en:
       due_date: "Due date"
       status: "Status"
       account: "Account"
+      edit: "Edit this invoice"
+      back: "Back to invoices"
+      destroy: "Destroy this invoice"
+      notice: "Invoice was successfully updated."
 
     table:
       id: "ID"
@@ -228,8 +208,60 @@ en:
       show: "Show this invoice"
       back: "Back to invoices"
 
-    show:
-      edit: "Edit this invoice"
-      back: "Back to invoices"
-      destroy: "Destroy this invoice"
-      notice: "Invoice was successfully updated."
+
+  reports:
+    financial_evolution: "Financial Evolution"
+    income: "Income"
+    expenses: "Expenses"
+    balance: "Balance"
+    open_invoices: "Open invoices"
+
+    monthly_comparison: "Income vs Expenses (Monthly)"
+
+    months:
+      jan: "Jan"
+      feb: "Feb"
+      mar: "Mar"
+      apr: "Apr"
+      may: "May"
+
+  settings:
+    title: "Preferences"
+    language: "Language"
+    currency: "Currency"
+    theme: "Theme"
+    theme_light: "Light"
+    theme_dark: "Dark"
+    date_format: "Date Format"
+    number_format: "Number Format"
+    save: "Save Changes"
+
+    languages:
+      pt: "Portuguese"
+      en: "English"
+
+    currencies:
+      usd: "USD - US Dollar"
+      brl: "BRL - Brazilian Real"
+
+
+
+
+  activerecord:
+    models:
+      account: "Account"
+    attributes:
+      account:
+        accountType: "Account type"
+        name: "Name"
+        balance: "Balance"
+        user_id: "User"
+
+      budget: "Budget"
+    attributes:
+      budget:
+        user_id: "User"
+        categories_id: "Category"
+        limit_amount: "Limit amount"
+        month: "Month"
+        year: "Year"
