@@ -3,8 +3,8 @@
 <%= render @budget %>
 
 <div>
-  <%= link_to "Edit this budget", edit_budget_path(@budget) %> |
-  <%= link_to "Back to budgets", budgets_path %>
+  <%= link_to t("budgets.show.edit"), edit_budget_path(@budget) %> |
+  <%= link_to t("budgets.show.back"), budgets_path %>
 
-  <%= button_to "Destroy this budget", @budget, method: :delete %>
+  <%= button_to t("budgets.show.destroy"), @budget, method: :delete %>
 </div>

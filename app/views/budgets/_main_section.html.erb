@@ -30,18 +30,18 @@
         </td>
 
         <td class="text-center d-flex gap-2 justify-content-center">
-          <%= link_to 'View',
+          <%= link_to t("budgets.actions.view"),
             budget_path(budget),
             class: "btn btn-sm btn-outline-primary fw-semibold" %>
 
-          <%= link_to 'Edit',
+          <%= link_to t("budgets.actions.edit"),
             edit_budget_path(budget),
             class: "btn btn-sm btn-outline-warning fw-semibold" %>
 
-          <%= link_to 'Delete',
+          <%= link_to t("budgets.actions.delete"),
             budget_path(budget),
             method: :delete,
-            data: { confirm: 'Are you sure?' },
+            data: { confirm: t("budgets.actions.confirm") },
             class: "btn btn-sm btn-outline-danger fw-semibold" %>
         </td>
       </tr>

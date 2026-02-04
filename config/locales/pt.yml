@@ -80,6 +80,17 @@ pt:
       month: "Mês"
       year: "Ano"
 
+      edit: "Editar este orçamento"
+      back: "Voltar para orçamentos"
+      destroy: "Excluir este orçamento"
+      notice: "Orçamento atualizado com sucesso."
+
+    actions:
+      view: "Ver"
+      edit: "Editar"
+      delete: "Excluir"
+      confirm: "Tem certeza?"
+
     edit:
       title: "Editando orçamento"
       heading: "Editando orçamento"

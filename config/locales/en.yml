@@ -128,3 +128,15 @@ en:
       heading: "Editing budget"
       show: "Show this budget"
       back: "Back to budgets"
+
+    show:
+      edit: "Edit this budget"
+      back: "Back to budgets"
+      destroy: "Destroy this budget"
+      notice: "Budget was successfully updated."
+
+    actions:
+      view: "View"
+      edit: "Edit"
+      delete: "Delete"
+      confirm: "Are you sure?"
