@@ -185,3 +185,14 @@ en:
       expenses: "Expenses"
       balance: "Balance"
       open_invoices: "Open Invoices"
+
+  invoices:
+    form:
+      errors_title: "%{count} error prohibited this invoice from being saved"
+      submit: "Save Invoice"
+
+    attributes:
+      total_amount: "Total Amount"
+      due_date: "Due Date"
+      status: "Status"
+      account: "Account"

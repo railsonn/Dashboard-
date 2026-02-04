@@ -141,3 +141,15 @@ pt:
       expenses: "Despesas"
       balance: "Saldo"
       open_invoices: "Faturas em Aberto"
+
+
+  invoices:
+    form:
+      errors_title: "%{count} erro(s) impediram esta fatura de ser salva"
+      submit: "Salvar Fatura"
+
+    attributes:
+      total_amount: "Valor Total"
+      due_date: "Data de Vencimento"
+      status: "Status"
+      account: "Conta"
