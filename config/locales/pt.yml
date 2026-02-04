@@ -79,3 +79,9 @@ pt:
       limit_amount: "Valor limite"
       month: "Mês"
       year: "Ano"
+
+    edit:
+      title: "Editando orçamento"
+      heading: "Editando orçamento"
+      show: "Ver este orçamento"
+      back: "Voltar para orçamentos"

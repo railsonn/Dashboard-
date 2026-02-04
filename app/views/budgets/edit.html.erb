@@ -1,12 +1,12 @@
-<% content_for :title, "Editing budget" %>
+<% content_for :title, t("budgets.edit.title") %>
 
-<h1>Editing budget</h1>
+<h1><%= t("budgets.edit.heading") %></h1>
 
 <%= render "form", budget: @budget %>
 
 <br>
 
 <div>
-  <%= link_to "Show this budget", @budget %> |
-  <%= link_to "Back to budgets", budgets_path %>
+  <%= link_to t("budgets.edit.show"), @budget %> |
+  <%= link_to t("budgets.edit.back"), budgets_path %>
 </div>

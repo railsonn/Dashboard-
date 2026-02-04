@@ -122,3 +122,9 @@ en:
     form:
       errors:
         title: "%{count} error(s) prohibited this budget from being saved"
+
+    edit:
+      title: "Editing budget"
+      heading: "Editing budget"
+      show: "Show this budget"
+      back: "Back to budgets"
