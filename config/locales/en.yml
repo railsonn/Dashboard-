@@ -186,6 +186,7 @@ en:
       balance: "Balance"
       open_invoices: "Open Invoices"
 
+
   invoices:
     form:
       errors_title: "%{count} error prohibited this invoice from being saved"
@@ -196,3 +197,27 @@ en:
       due_date: "Due Date"
       status: "Status"
       account: "Account"
+
+    show:
+      total_amount: "Total amount"
+      due_date: "Due date"
+      status: "Status"
+      account: "Account"
+
+    table:
+      id: "ID"
+      status: "Status"
+      due_date: "Due date"
+      total_amount: "Total amount"
+      actions: "Actions"
+
+    actions:
+      view: "View"
+      edit: "Edit"
+      delete: "Delete"
+      confirm: "Are you sure?"
+
+    status:
+      paid: "Paid"
+      pending: "Pending"
+      overdue: "Overdue"

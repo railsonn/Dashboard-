@@ -1,22 +1,21 @@
 <div id="<%= dom_id invoice %>">
   <p>
-    <strong>Total amount:</strong>
+    <strong><%= t("invoices.show.total_amount") %>:</strong>
     <%= invoice.total_amount %>
   </p>
 
   <p>
-    <strong>Due date:</strong>
+    <strong><%= t("invoices.show.due_date") %>:</strong>
     <%= invoice.due_date %>
   </p>
 
   <p>
-    <strong>Status:</strong>
+    <strong><%= t("invoices.show.status") %>:</strong>
     <%= invoice.status %>
   </p>
 
   <p>
-    <strong>Account:</strong>
+    <strong><%= t("invoices.show.account") %>:</strong>
     <%= invoice.account_id %>
   </p>
-
 </div>

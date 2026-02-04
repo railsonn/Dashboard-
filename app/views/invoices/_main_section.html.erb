@@ -2,55 +2,68 @@
   <table class="table table-striped table-hover align-middle mb-0">
     <thead class="text-uppercase small">
       <tr>
-        <th>ID</th>
-        <th>Status</th>
-        <th>Due date</th>
-        <th>Total amount</th>
-        <th class="text-center">Actions</th>
+        <th><%= t("invoices.table.id") %></th>
+        <th><%= t("invoices.table.status") %></th>
+        <th><%= t("invoices.table.due_date") %></th>
+        <th><%= t("invoices.table.total_amount") %></th>
+        <th class="text-center"><%= t("invoices.table.actions") %></th>
       </tr>
     </thead>
 
     <tbody>
-    <% invoices.each_with_index do |invoice, index| %>
-      <tr>
-        <td class="fw-bold">
-          <%= invoice.id %>
-        </td>
+      <% invoices.each do |invoice| %>
+        <tr>
+          <td class="fw-bold">
+            <%= invoice.id %>
+          </td>
 
-        <td>
-          <span class="badge <%= invoice.status == 'Pago' ? 'bg-success text-light' : invoice.status == 'Pendente' ? 'bg-warning text-light' : 'bg-danger text-light' %> text-uppercase small">
-            <%= invoice.status %>
-          </span>
-        </td>
+          <td>
+            <% status_key =
+                case invoice.status
+                when "Pago", "Paid" then "paid"
+                when "Pendente", "Pending" then "pending"
+                else "overdue"
+                end
+            %>
 
-        <td class="fw-bold">
-          <%= invoice.due_date %>
-        </td>
+            <span class="badge
+              <%= status_key == "paid" ? "bg-success" :
+                  status_key == "pending" ? "bg-warning" : "bg-danger" %>
+              text-light text-uppercase small">
 
-        <td class="fw-bold">
-          <%= number_to_currency(invoice.total_amount) %>
-        </td>
+              <%= t("invoices.status.#{status_key}") %>
+            </span>
+          </td>
 
-        <td class="text-center d-flex gap-2 justify-content-center">
-          <%= link_to 'View',
-            invoice_path(invoice),
-            class: "btn btn-sm btn-outline-primary fw-semibold" %>
+          <td class="fw-bold">
+            <%= t(invoice.due_date) %>
+          </td>
 
-          <%= link_to 'Edit',
-            edit_invoice_path(invoice),
-            class: "btn btn-sm btn-outline-warning fw-semibold" %>
+          <td class="fw-bold">
+            <%= number_to_currency(invoice.total_amount) %>
+          </td>
 
-          <%= link_to 'Delete',
-            invoice_path(invoice),
-            method: :delete,
-            data: { confirm: 'Are you sure?' },
-            class: "btn btn-sm btn-outline-danger fw-semibold" %>
-        </td>
-      </tr>
-    <% end %>
+          <td class="text-center d-flex gap-2 justify-content-center">
+            <%= link_to t("invoices.actions.view"),
+              invoice_path(invoice),
+              class: "btn btn-sm btn-outline-primary fw-semibold" %>
+
+            <%= link_to t("invoices.actions.edit"),
+              edit_invoice_path(invoice),
+              class: "btn btn-sm btn-outline-warning fw-semibold" %>
+
+            <%= link_to t("invoices.actions.delete"),
+              invoice_path(invoice),
+              method: :delete,
+              data: { confirm: t("invoices.actions.confirm") },
+              class: "btn btn-sm btn-outline-danger fw-semibold" %>
+          </td>
+        </tr>
+      <% end %>
     </tbody>
   </table>
+
   <div class="d-flex justify-content-end align-items-center mt-3">
     <%= paginate @invoices, pagination_theme: @theme %>
-  </div>  
+  </div>
 </div>
