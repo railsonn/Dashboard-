@@ -4,15 +4,14 @@
   <div class="row justify-content-center">
     <div class="col-lg-8 col-xl-6">
 
-      <!-- Card principal -->
+      <!-- Título -->
+      <h4 id="budget-edit-title" class="mb-4">
+        <%= t("budgets.edit.heading") %>
+      </h4>
 
-          <!-- Título -->
-          <h4 id="budget-edit-title" class="mb-4">
-            <%= t("budgets.edit.heading") %>
-          </h4>
-
-          <!-- Formulário -->
-          <%= render "form", budget: @budget %>
+      <!-- Formulário -->
+      <%= render "form", budget: @budget %>
+      
     </div>
   </div>
 </div>

@@ -1,48 +1,43 @@
 <% content_for :title, t("budgets.show.title") %>
 
 <div class="container-fluid py-4 <%= @theme %>-settings budget-show-page">
-  <div class="row justify-content-center">
+  <div class="row">
     <div class="col-lg-8 col-xl-6">
 
-      <!-- Card principal -->
-      <div class="card shadow-sm account-show-card">
-        <div class="card-body">
-
-          <!-- Aviso / notice -->
-          <% if notice.present? %>
-            <div class="alert alert-success">
-              <%= notice %>
-            </div>
-          <% end %>
-
-          <!-- Renderiza o budget -->
-          <%= render @budget %>
-
-          <!-- Links e botão de ações -->
-          <div class="d-flex justify-content-between align-items-center mt-4">
-            <!-- Links à esquerda: Edit e Back -->
-            <div class="d-flex gap-2">
-              <%= link_to t("budgets.show.edit"),
-                          edit_budget_path(@budget),
-                          class: "btn btn-outline-warning fw-semibold" %>
-
-              <%= link_to t("budgets.show.back"),
-                          budgets_path,
-                          class: "btn btn-outline-secondary fw-semibold" %>
-            </div>
-
-            <!-- Botão à direita: Delete -->
-            <%= button_to t("budgets.show.destroy"),
-                          @budget,
-                          method: :delete,
-                          data: { confirm: t("budgets.show.confirm", default: "Are you sure?") },
-                          class: "btn btn-outline-danger fw-semibold" %>
-          </div>
+      <!-- Card principal (igual account show) -->
+      <!-- Título -->
+      <h4 id="budget-show-title" class="mb-4">
+        <%= t("budgets.show.title", default: "Budget Details") %>
+      </h4>
 
 
-        </div>
+      <!-- Conteúdo do budget -->
+      <div class="budget-details">
+        <%= render @budget %>
       </div>
 
+
+      <!-- Ações -->
+      <div class="d-flex justify-content-between align-items-center mt-4">
+
+        <!-- Esquerda: Editar / Voltar -->
+        <div class="d-flex gap-2">
+          <%= link_to t("budgets.show.edit"),
+                      edit_budget_path(@budget),
+                      class: "btn btn-sm btn-outline-primary" %>
+
+          <%= link_to t("budgets.show.back"),
+                      budgets_path,
+                      class: "btn btn-sm btn-outline-secondary" %>
+        </div>
+
+        <!-- Direita: Excluir -->
+        <%= button_to t("budgets.show.destroy"),
+                      @budget,
+                      method: :delete,
+                      data: { confirm: t("budgets.show.confirm", default: "Are you sure?") },
+                      class: "btn btn-sm btn-outline-danger" %>
+      </div>
     </div>
   </div>
 </div>
