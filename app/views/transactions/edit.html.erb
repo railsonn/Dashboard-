@@ -1,12 +1,30 @@
-<% content_for :title, "Editing transaction" %>
+<% content_for :title, t("transactions.edit.title") %>
 
-<h1>Editing transaction</h1>
+<div class="container-fluid py-4 <%= @theme %>-settings edit-transaction-page">
+  <div class="row">
+    <div class="col-lg-8 col-xl-6">
 
-<%= render "form", transaction: @transaction %>
+      <!-- Título -->
+      <h1 id="transaction-edit-title">
+        <%= t("transactions.edit.heading") %>
+      </h1>
 
-<br>
+      <!-- Card / Form -->
+      <div class="card shadow-sm">
+        <%= render "form", transaction: @transaction %>
+      </div>
 
-<div>
-  <%= link_to "Show this transaction", @transaction %> |
-  <%= link_to "Back to transactions", transactions_path %>
+      <!-- Actions -->
+      <div class="d-flex justify-content-between align-items-center mt-4">
+        <%= link_to t("transactions.edit.back"),
+              transactions_path,
+              class: "btn btn-outline-secondary" %>
+
+        <%= link_to t("transactions.edit.show"),
+              @transaction,
+              class: "btn btn-outline-primary" %>
+      </div>
+
+    </div>
+  </div>
 </div>

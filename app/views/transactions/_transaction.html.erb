@@ -1,32 +1,34 @@
 <div id="<%= dom_id transaction %>">
   <p>
-    <strong>Transaction type:</strong>
-    <%= transaction.transaction_type %>
+    <strong><%= t("transactions.show.transaction_type") %>:</strong>
+    <%= t(
+          "transactions.types.#{transaction.transaction_type.downcase}",
+          default: transaction.transaction_type
+        ) %>
   </p>
 
   <p>
-    <strong>Amount:</strong>
-    <%= transaction.amount %>
+    <strong><%= t("transactions.show.amount") %>:</strong>
+    <%= number_to_currency(transaction.amount) %>
   </p>
 
   <p>
-    <strong>Description:</strong>
+    <strong><%= t("transactions.show.description") %>:</strong>
     <%= transaction.description %>
   </p>
 
   <p>
-    <strong>Transaction date:</strong>
-    <%= transaction.transaction_date %>
+    <strong><%= t("transactions.show.transaction_date") %>:</strong>
+    <%= t(transaction.transaction_date) %>
   </p>
 
   <p>
-    <strong>User:</strong>
+    <strong><%= t("transactions.show.user") %>:</strong>
     <%= transaction.user_id %>
   </p>
 
   <p>
-    <strong>Account:</strong>
+    <strong><%= t("transactions.show.account") %>:</strong>
     <%= transaction.account_id %>
   </p>
-
 </div>

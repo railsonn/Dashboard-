@@ -137,6 +137,25 @@ en:
       credit: "Credit"
       debit: "Debit"
 
+    show:
+      transaction_type: "Transaction type"
+      amount: "Amount"
+      description: "Description"
+      transaction_date: "Transaction date"
+      user: "User"
+      account: "Account"
+
+    edit:
+      title: "Editing transaction"
+      heading: "Editing transaction"
+      show: "Show this transaction"
+      back: "Back to transactions"
+      show_page:
+      edit: "Edit this transaction"
+      back: "Back to transactions"
+      destroy: "Destroy this transaction"
+      notice: "Transaction was successfully updated"
+
 
   features:
     title: "Features"

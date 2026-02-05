@@ -105,11 +105,12 @@ pt:
       show: "Ver este orçamento"
       back: "Voltar para orçamentos"
 
+
   transactions:
     form:
       errors_title: "%{count} erro(s) impediram esta transação de ser salva"
       submit: "Salvar transação"
-      
+
     table:
       id: "ID"
       transaction_date: "Data"
@@ -127,6 +128,27 @@ pt:
     types:
       credit: "Crédito"
       debit: "Débito"
+
+    show:
+      transaction_type: "Tipo de transação"
+      amount: "Valor"
+      description: "Descrição"
+      transaction_date: "Data da transação"
+      user: "Usuário"
+      account: "Conta"
+
+    edit:
+      title: "Editar transação"
+      heading: "Editar transação"
+      show: "Ver esta transação"
+      back: "Voltar para transações"
+
+    show_page:
+      edit: "Editar esta transação"
+      back: "Voltar para transações"
+      destroy: "Excluir esta transação"
+      notice: "Transação atualizada com sucesso"
+
 
   features:
     title: "Funcionalidades"

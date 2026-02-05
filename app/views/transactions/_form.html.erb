@@ -1,52 +1,73 @@
-<%= form_with(model: transaction) do |form| %>
-  <% if transaction.errors.any? %>
-    <div style="color: red">
-      <h2>
-        <%= t(
-              "transactions.form.errors_title",
-              count: transaction.errors.count
-            ) %>
-      </h2>
+<%= form_with(model: transaction, class: "card shadow-sm") do |form| %>
+  <div class="card-body">
 
-      <ul>
-        <% transaction.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+    <% if transaction.errors.any? %>
+      <div class="alert alert-danger mb-4">
+        <h6 class="mb-2">
+          <%= t(
+                "transactions.form.errors_title",
+                count: transaction.errors.count
+              ) %>
+        </h6>
+
+        <ul class="mb-0 ps-3">
+          <% transaction.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <!-- Transaction type -->
+    <div class="mb-3">
+      <%= form.label :transaction_type,
+      t("transactions.form.transaction_type"),
+      class: "form-label fw-semibold" %>
+
+      <%= form.select :transaction_type,
+        [
+          [t("transactions.types.credit"), "CREDIT"],
+          [t("transactions.types.debit"), "DEBIT"]
+        ],
+        { prompt: t("transactions.form.select_type") },
+        class: "form-select transaction-type-select" %>
     </div>
-  <% end %>
 
-  <div>
-    <%= form.label :transaction_type, style: "display: block" %>
-    <%= form.text_field :transaction_type %>
-  </div>
+    <!-- Amount -->
+    <div class="mb-3">
+      <%= form.label :amount, class: "form-label" %>
+      <%= form.number_field :amount, class: "form-control" %>
+    </div>
 
-  <div>
-    <%= form.label :amount, style: "display: block" %>
-    <%= form.number_field :amount %>
-  </div>
+    <!-- Description -->
+    <div class="mb-3">
+      <%= form.label :description, class: "form-label" %>
+      <%= form.text_field :description, class: "form-control" %>
+    </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
-  </div>
+    <!-- Transaction date -->
+    <div class="mb-3">
+      <%= form.label :transaction_date, class: "form-label" %>
+      <%= form.date_field :transaction_date, class: "form-control" %>
+    </div>
 
-  <div>
-    <%= form.label :transaction_date, style: "display: block" %>
-    <%= form.date_field :transaction_date %>
-  </div>
+    <!-- User -->
+    <div class="mb-3">
+      <%= form.label :user_id, class: "form-label" %>
+      <%= form.text_field :user_id, class: "form-control" %>
+    </div>
 
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
-  </div>
+    <!-- Account -->
+    <div class="mb-4">
+      <%= form.label :account_id, class: "form-label" %>
+      <%= form.text_field :account_id, class: "form-control" %>
+    </div>
 
-  <div>
-    <%= form.label :account_id, style: "display: block" %>
-    <%= form.text_field :account_id %>
-  </div>
+    <!-- Actions -->
+    <div class="d-flex justify-content-end gap-2">
+      <%= form.submit t("transactions.form.submit"),
+            class: "btn btn-primary fw-semibold px-4" %>
+    </div>
 
-  <div>
-    <%= form.submit t("transactions.form.submit") %>
   </div>
 <% end %>

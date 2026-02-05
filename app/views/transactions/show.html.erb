@@ -1,10 +1,20 @@
-<p style="color: green"><%= notice %></p>
+<% if notice.present? %>
+  <p style="color: green">
+    <%= t("transactions.show_page.notice", default: notice) %>
+  </p>
+<% end %>
 
 <%= render @transaction %>
 
 <div>
-  <%= link_to "Edit this transaction", edit_transaction_path(@transaction) %> |
-  <%= link_to "Back to transactions", transactions_path %>
+  <%= link_to t("transactions.show_page.edit"),
+        edit_transaction_path(@transaction) %> |
 
-  <%= button_to "Destroy this transaction", @transaction, method: :delete %>
+  <%= link_to t("transactions.show_page.back"),
+        transactions_path %>
+
+  <%= button_to t("transactions.show_page.destroy"),
+        @transaction,
+        method: :delete,
+        data: { confirm: t("transactions.actions.confirm_delete") } %>
 </div>
