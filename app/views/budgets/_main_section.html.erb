@@ -2,13 +2,14 @@
   <table class="table table-striped table-hover align-middle mb-0">
     <thead class="text-uppercase small">
       <tr>
-        <th>ID</th>
-        <th>Year</th>
-        <th>Month</th>
-        <th>Limit amount</th>
-        <th class="text-center">Actions</th>
+        <th><%= t("budgets.table.id") %></th>
+        <th><%= t("budgets.table.year") %></th>
+        <th><%= t("budgets.table.month") %></th>
+        <th><%= t("budgets.table.limit_amount") %></th>
+        <th class="text-center"><%= t("budgets.table.actions") %></th>
       </tr>
     </thead>
+
     
     <tbody>
     <% budgets.each_with_index do |budget, index| %>

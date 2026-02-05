@@ -95,6 +95,12 @@ en:
 
 
   budgets:
+    table:
+      id: "ID"
+      year: "Year"
+      month: "Month"
+      limit_amount: "Limit amount"
+      actions: "Actions"
     form:
       errors:
         title: "%{count} error(s) prohibited this budget from being saved"

@@ -81,6 +81,13 @@ pt:
 
 
   budgets:
+    table:
+      id: "ID"
+      year: "Ano"
+      month: "Mês"
+      limit_amount: "Limite"
+      actions: "Ações"
+
     show:
       user: "Usuário"
       categories: "Categorias"
