@@ -46,7 +46,28 @@
                 </p>
               </div>
             </div>
-            
+
+            <!-- Ações -->
+            <div class="d-flex justify-content-between align-items-center mt-4">
+
+              <!-- Esquerda: Editar / Voltar -->
+              <div class="d-flex gap-2">
+                <%= link_to t("budgets.show.edit"),
+                            edit_budget_path(@budget),
+                            class: "btn btn-sm btn-outline-primary" %>
+
+                <%= link_to t("budgets.show.back"),
+                            budgets_path,
+                            class: "btn btn-sm btn-outline-secondary" %>
+              </div>
+
+              <!-- Direita: Excluir -->
+              <%= button_to t("budgets.show.destroy"),
+                            @budget,
+                            method: :delete,
+                            data: { confirm: t("budgets.show.confirm", default: "Are you sure?") },
+                            class: "btn btn-sm btn-outline-danger" %>
+            </div>
           </div>
         </div>
       </div>
