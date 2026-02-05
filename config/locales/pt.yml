@@ -109,6 +109,24 @@ pt:
     form:
       errors_title: "%{count} erro(s) impediram esta transação de ser salva"
       submit: "Salvar transação"
+      
+    table:
+      id: "ID"
+      transaction_date: "Data"
+      description: "Descrição"
+      amount: "Valor"
+      transaction_type: "Tipo"
+      actions: "Ações"
+
+    actions:
+      view: "Ver"
+      edit: "Editar"
+      delete: "Excluir"
+      confirm_delete: "Tem certeza que deseja excluir?"
+
+    types:
+      credit: "Crédito"
+      debit: "Débito"
 
   features:
     title: "Funcionalidades"
