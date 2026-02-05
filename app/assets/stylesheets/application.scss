@@ -496,6 +496,24 @@ body {
   background: transparent;
 }
 
+.light-settings #budget-edit-title {
+  color: #0a0c16;
+  padding: 8px 0;    
+  font-size: 2rem;
+  position: relative;       
+  left: 20px;
+  top: 20px;
+}
+
+.dark-settings #budget-edit-title {
+  color: #6c757d;
+  padding: 8px 0;    
+  font-size: 2rem;
+  position: relative;       
+  left: 20px;
+  top: 20px;
+}
+
 
 
 

@@ -1,42 +1,87 @@
-<%= form_with(model: budget) do |form| %>
-  <% if budget.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(budget.errors.count, "error") %> prohibited this budget from being saved:</h2>
+<div class="container-fluid py-4 <%= @theme %>-settings budget-edit-page">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-xl-6">
 
-      <ul>
-        <% budget.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+      <!-- Card do formulário -->
+      <div class="card shadow-sm edit-account-card">
+        <div class="card-body">
+
+          <!-- Título -->
+          <h4 class="mb-4">
+            <%= t("budgets.edit.title", default: "Edit Budget") %>
+          </h4>
+
+          <!-- Exibe erros -->
+          <% if budget.errors.any? %>
+            <div class="alert alert-danger">
+              <h5>
+                <%= pluralize(budget.errors.count, "error") %> prohibited this budget from being saved:
+              </h5>
+              <ul>
+                <% budget.errors.each do |error| %>
+                  <li><%= error.full_message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <%= form_with(model: budget, local: true) do |form| %>
+            <div class="mb-3">
+              <%= form.label :user_id, class: "form-label" %>
+              <%= form.text_field :user_id, class: "form-control" %>
+            </div>
+
+            <div class="mb-3">
+              <%= form.label :categories_id, class: "form-label" %>
+              <%= form.text_field :categories_id, class: "form-control" %>
+            </div>
+
+            <div class="mb-3">
+              <%= form.label :limit_amount, class: "form-label" %>
+              <%= form.text_field :limit_amount, class: "form-control" %>
+            </div>
+
+            <div class="mb-3">
+              <%= form.label :month, class: "form-label" %>
+              <%= form.text_field :month, class: "form-control" %>
+            </div>
+
+            <div class="mb-3">
+              <%= form.label :year, class: "form-label" %>
+              <%= form.text_field :year, class: "form-control" %>
+            </div>
+
+            <!-- Links e botões finais -->
+            <div class="d-flex justify-content-between mt-4">
+              <!-- Back à esquerda -->
+              <%= link_to t("budgets.edit.back"),
+                          budgets_path,
+                          class: "btn btn-outline-secondary fw-semibold" %>
+
+              <!-- Show / Delete / Save à direita -->
+              <div class="d-flex gap-2">
+                <% if budget.persisted? %>
+                  <%= link_to t("budgets.edit.show"),
+                              @budget,
+                              class: "btn btn-outline-primary fw-semibold" %>
+
+                  <%= button_to t("budgets.show.destroy"),
+                                @budget,
+                                method: :delete,
+                                data: { confirm: t("accounts.show.confirm", default: "Are you sure?") },
+                                class: "btn btn-outline-danger fw-semibold",
+                                form_class: "d-inline" %>
+                <% end %>
+
+                <%= form.submit t("actions.save", default: "Save"),
+                      class: "btn btn-primary px-4 fw-semibold" %>
+              </div>
+            </div>
+          <% end %>
+          
+        </div>
+      </div>
+
     </div>
-  <% end %>
-
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
   </div>
-
-  <div>
-    <%= form.label :categories_id, style: "display: block" %>
-    <%= form.text_field :categories_id %>
-  </div>
-
-  <div>
-    <%= form.label :limit_amount, style: "display: block" %>
-    <%= form.text_field :limit_amount %>
-  </div>
-
-  <div>
-    <%= form.label :month, style: "display: block" %>
-    <%= form.text_field :month %>
-  </div>
-
-  <div>
-    <%= form.label :year, style: "display: block" %>
-    <%= form.text_field :year %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
