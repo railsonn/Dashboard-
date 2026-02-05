@@ -14,17 +14,6 @@
         <%= render "form", transaction: @transaction %>
       </div>
 
-      <!-- Actions -->
-      <div class="d-flex justify-content-between align-items-center mt-4">
-        <%= link_to t("transactions.edit.back"),
-              transactions_path,
-              class: "btn btn-outline-secondary" %>
-
-        <%= link_to t("transactions.edit.show"),
-              @transaction,
-              class: "btn btn-outline-primary" %>
-      </div>
-
     </div>
   </div>
 </div>

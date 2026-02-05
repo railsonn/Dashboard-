@@ -64,10 +64,25 @@
     </div>
 
     <!-- Actions -->
-    <div class="d-flex justify-content-end gap-2">
-      <%= form.submit t("transactions.form.submit"),
-            class: "btn btn-primary fw-semibold px-4" %>
+    <div class="d-flex justify-content-between align-items-center mt-4">
+
+      <!-- Esquerda -->
+      <%= link_to t("transactions.edit.back"),
+            transactions_path,
+            class: "btn btn-outline-secondary" %>
+
+      <!-- Direita -->
+      <div class="d-flex gap-2">
+        <%= link_to t("transactions.edit.show"),
+              @transaction,
+              class: "btn btn-outline-primary" %>
+
+        <%= form.submit t("transactions.form.submit"),
+              class: "btn btn-primary fw-semibold px-4" %>
+      </div>
+
     </div>
+
 
   </div>
 <% end %>
