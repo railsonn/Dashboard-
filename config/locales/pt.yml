@@ -51,14 +51,14 @@ pt:
   activerecord:
     models:
       account: "Conta"
+      transaction: "Transação"
     attributes:
       account:
         accountType: "Tipo da conta"
         name: "Nome"
         balance: "Saldo"
         user_id: "Usuário"
-
-      budget: "Orçamento"
+        budget: "Orçamento"
     attributes:
       budget:
         user_id: "Usuário"
@@ -66,6 +66,14 @@ pt:
         limit_amount: "Valor limite"
         month: "Mês"
         year: "Ano"
+
+      transaction:
+        transaction_type: "Tipo de transação"
+        amount: "Valor"
+        description: "Descrição"
+        transaction_date: "Data da transação"
+        user_id: "Usuário"
+        account_id: "Conta"
 
   errors:
     messages:
@@ -96,6 +104,11 @@ pt:
       heading: "Editando orçamento"
       show: "Ver este orçamento"
       back: "Voltar para orçamentos"
+
+  transactions:
+    form:
+      errors_title: "%{count} erro(s) impediram esta transação de ser salva"
+      submit: "Salvar transação"
 
   features:
     title: "Funcionalidades"
