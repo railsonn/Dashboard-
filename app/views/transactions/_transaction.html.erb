@@ -1,34 +1,52 @@
-<div id="<%= dom_id transaction %>">
-  <p>
-    <strong><%= t("transactions.show.transaction_type") %>:</strong>
-    <%= t(
-          "transactions.types.#{transaction.transaction_type.downcase}",
-          default: transaction.transaction_type
-        ) %>
-  </p>
+<div id="<%= dom_id transaction %>" class="transaction-details">
+
+  <div class="row">
+    <div class="col-md-6">
+      <p>
+        <strong><%= t("transactions.show.transaction_type") %></strong>
+        <span class="transaction-type">
+          <%= t(
+                "transactions.types.#{transaction.transaction_type.downcase}",
+                default: transaction.transaction_type
+              ) %>
+        </span>
+      </p>
+    </div>
+
+    <div class="col-md-6">
+      <p>
+        <strong><%= t("transactions.show.amount") %></strong>
+        <span class="fw-semibold transaction-amount">
+          <%= number_to_currency(transaction.amount) %>
+        </span>
+      </p>
+    </div>
+  </div>
 
   <p>
-    <strong><%= t("transactions.show.amount") %>:</strong>
-    <%= number_to_currency(transaction.amount) %>
+    <strong><%= t("transactions.show.description") %></strong>
+    <span><%= transaction.description %></span>
   </p>
 
-  <p>
-    <strong><%= t("transactions.show.description") %>:</strong>
-    <%= transaction.description %>
-  </p>
+  <div class="row">
+    <div class="col-md-6">
+      <p>
+        <strong><%= t("transactions.show.transaction_date") %></strong>
+        <span><%= t(transaction.transaction_date) %></span>
+      </p>
+    </div>
+
+    <div class="col-md-6">
+      <p>
+        <strong><%= t("transactions.show.user") %></strong>
+        <span><%= transaction.user_id %></span>
+      </p>
+    </div>
+  </div>
 
   <p>
-    <strong><%= t("transactions.show.transaction_date") %>:</strong>
-    <%= t(transaction.transaction_date) %>
+    <strong><%= t("transactions.show.account") %></strong>
+    <span><%= transaction.account_id %></span>
   </p>
 
-  <p>
-    <strong><%= t("transactions.show.user") %>:</strong>
-    <%= transaction.user_id %>
-  </p>
-
-  <p>
-    <strong><%= t("transactions.show.account") %>:</strong>
-    <%= transaction.account_id %>
-  </p>
 </div>

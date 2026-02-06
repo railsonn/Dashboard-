@@ -1,20 +1,40 @@
-<% if notice.present? %>
-  <p style="color: green">
-    <%= t("transactions.show_page.notice", default: notice) %>
-  </p>
-<% end %>
+<% content_for :title, t("transactions.show_page.title") %>
 
-<%= render @transaction %>
+<div class="container-fluid py-4 <%= @theme %>-settings transaction-show-page">
+  <div class="row">
+    <div class="col-lg-8 col-xl-6">
 
-<div>
-  <%= link_to t("transactions.show_page.edit"),
-        edit_transaction_path(@transaction) %> |
+      <div class="card shadow-sm account-show-card">
+        <div class="card-body">
 
-  <%= link_to t("transactions.show_page.back"),
-        transactions_path %>
+          <h4 class="mb-4" id="transaction-show-title">
+            <%= t("transactions.show.title", default: "Transaction Details") %>
+          </h4>
 
-  <%= button_to t("transactions.show_page.destroy"),
-        @transaction,
-        method: :delete,
-        data: { confirm: t("transactions.actions.confirm_delete") } %>
+          <%= render @transaction %>
+
+          <!-- Actions -->
+          <div class="d-flex justify-content-between align-items-center mt-4">
+            <%= link_to t("transactions.show_page.back"),
+                  transactions_path,
+                  class: "btn btn-outline-secondary" %>
+
+            <div class="d-flex gap-2">
+              <%= link_to t("transactions.show_page.edit"),
+                    edit_transaction_path(@transaction),
+                    class: "btn btn-outline-primary" %>
+
+              <%= button_to t("transactions.show_page.destroy"),
+                    @transaction,
+                    method: :delete,
+                    data: { confirm: t("transactions.actions.confirm_delete") },
+                    class: "btn btn-outline-danger" %>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>

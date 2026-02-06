@@ -323,7 +323,6 @@ body {
 
 
 
-
 /* =========================
    ACCOUNT EDIT – FIX BG + HEIGHT
 ========================= */
@@ -504,7 +503,7 @@ body {
   top: 20px;
 }
 
- #budget-show-title {
+.dark-settings #budget-show-title {
   width: 20%;
   color: #6c757d;
   padding: 8px 0;    
@@ -647,6 +646,99 @@ body {
   left: 20px;
   bottom: 5px;
 }
+
+
+/* =========================
+   TRANSACTION SHOW PAGE
+========================= */
+
+.transaction-show-page .account-show-card,
+.transaction-show-page .account-show-card .card-body {
+  background-color: transparent;
+  border: none;
+}
+
+/* Scroll só no conteúdo */
+.light-settings .transaction-show-page .col-lg-8,
+.dark-settings .transaction-show-page .col-lg-8 {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 16px;
+}
+
+/* Scroll fino */
+.transaction-show-page .col-lg-8 {
+  scrollbar-width: thin;
+  scrollbar-color: #adb5bd transparent;
+}
+
+.transaction-show-page .col-lg-8::-webkit-scrollbar {
+  width: 6px;
+}
+
+.transaction-show-page .col-lg-8::-webkit-scrollbar-thumb {
+  background-color: #adb5bd;
+  border-radius: 8px;
+}
+
+.transaction-show-page .col-lg-8::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+
+/* =========================
+   TRANSACTION DETAILS
+========================= */
+
+.transaction-details p {
+  margin-bottom: 1.25rem;
+}
+
+/* Labels */
+.transaction-details p strong {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  opacity: .7;
+  margin-bottom: 4px;
+}
+
+/* Valores */
+.transaction-details p span {
+  font-size: 1rem;
+  display: block;
+}
+
+/* Valor monetário em destaque */
+.transaction-details .transaction-amount {
+  font-size: 1.4rem;
+}
+
+/* Tipo da transação */
+.transaction-details .transaction-type {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  width: fit-content;
+}
+
+/* Cores por tipo */
+.transaction-details .transaction-type {
+  background-color: rgba(13,110,253,.15);
+  color: #0d6efd;
+}
+
+/* Dark mode */
+.dark-settings .transaction-details .transaction-type {
+  background-color: rgba(13,110,253,.25);
+  color: #4dabf7;
+}
+
 
 
 
