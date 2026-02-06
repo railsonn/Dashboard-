@@ -26,4 +26,21 @@
       <%= invoice.account_id %>
     </span>
   </p>
+
+  <div class="d-flex justify-content-between align-items-center mt-4">
+  <div class="d-flex gap-3">
+    <%= link_to t("invoices.show.edit"),
+          edit_invoice_path(@invoice),
+          class: "btn btn-outline-primary px-4" %>
+
+    <%= link_to t("invoices.show.back"),
+          invoices_path,
+          class: "btn btn-outline-secondary px-4" %>
+  </div>
+
+  <%= link_to t("invoices.show.destroy"),
+        invoice_path(@invoice),
+        data: { turbo_method: :delete, turbo_confirm: t("invoices.show.confirm", default: "Are you sure?") },
+        class: "btn btn-outline-danger px-4" %>
+</div>
 </div>
