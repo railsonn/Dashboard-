@@ -748,6 +748,253 @@ body {
 
 
 
+/* =========================
+   INVOICE EDIT PAGE
+========================= */
+
+.invoice-edit-page .card {
+  background-color: transparent;
+  border: none;
+}
+
+.invoice-edit-page .card-body {
+  padding: 2.5rem;
+}
+
+/* Inputs já herdam dark/light do settings */
+.invoice-edit-page .form-control {
+  border-radius: 10px;
+}
+
+/* Alert de erro */
+.invoice-edit-page .alert {
+  border-radius: 12px;
+}
+
+
+
+/* =========================
+   INVOICE SHOW PAGE
+========================= */
+
+.invoice-details p {
+  margin-bottom: 1.25rem;
+}
+
+/* Labels */
+.invoice-details p strong {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  opacity: .7;
+  margin-bottom: 4px;
+}
+
+/* Valores */
+.invoice-details p span {
+  display: block;
+  font-size: 1rem;
+}
+
+/* Valor total em destaque */
+.invoice-details .invoice-amount {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* Status da fatura */
+.invoice-details .invoice-status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  width: fit-content;
+  background-color: rgba(255,193,7,.2);
+  color: #ffc107;
+}
+
+/* Dark mode */
+.dark-settings .invoice-details .invoice-status {
+  background-color: rgba(255,193,7,.25);
+  color: #ffda6a;
+}
+
+
+
+/* =========================
+   INVOICE EDIT PAGE
+========================= */
+
+/* Card herda o fundo do container */
+.light-settings .invoice-edit-card,
+.light-settings .invoice-edit-card .card-body {
+  background-color: #ffffff;
+  border: none;
+}
+
+.dark-settings .invoice-edit-card,
+.dark-settings .invoice-edit-card .card-body {
+  background-color: #0d1b2a;
+  border: none;
+}
+
+/* Título (igual transaction / budget edit) */
+.light-settings #invoice-edit-title {
+  width: 25%;
+  color: #0a0c16;
+  padding: 8px 0;
+  font-size: 2rem;
+  position: relative;
+  left: 20px;
+  top: 10px;
+}
+
+.dark-settings #invoice-edit-title {
+  width: 25%;
+  color: #6c757d;
+  padding: 8px 0;
+  font-size: 2rem;
+  position: relative;
+  left: 20px;
+  top: 10px;
+}
+
+/* Scroll só no conteúdo */
+.light-settings .invoice-edit-page .col-lg-8,
+.dark-settings .invoice-edit-page .col-lg-8 {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 16px;
+}
+
+/* Scroll fino */
+.invoice-edit-page .col-lg-8 {
+  scrollbar-width: thin;
+  scrollbar-color: #adb5bd transparent;
+}
+
+.invoice-edit-page .col-lg-8::-webkit-scrollbar {
+  width: 6px;
+}
+
+.invoice-edit-page .col-lg-8::-webkit-scrollbar-thumb {
+  background-color: #adb5bd;
+  border-radius: 8px;
+}
+
+.invoice-edit-page .col-lg-8::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+/* =========================
+   INVOICE SHOW PAGE
+========================= */
+
+.invoice-show-page .account-show-card,
+.invoice-show-page .account-show-card .card-body {
+  background-color: transparent;
+  border: none;
+}
+
+/* Título */
+.light-settings #invoice-show-title {
+  width: 20%;
+  color: #0a0c16;
+  padding: 8px 0;
+  font-size: 2rem;
+  position: relative;
+  left: 20px;
+  top: 20px;
+}
+
+.dark-settings #invoice-show-title {
+  width: 20%;
+  color: #6c757d;
+  padding: 8px 0;
+  font-size: 2rem;
+  position: relative;
+  left: 20px;
+  bottom: 5px;
+}
+
+/* Scroll apenas no conteúdo */
+.light-settings .invoice-show-page .col-lg-8,
+.dark-settings .invoice-show-page .col-lg-8 {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 16px;
+}
+
+/* Scroll fino */
+.invoice-show-page .col-lg-8 {
+  scrollbar-width: thin;
+  scrollbar-color: #adb5bd transparent;
+}
+
+.invoice-show-page .col-lg-8::-webkit-scrollbar {
+  width: 6px;
+}
+
+.invoice-show-page .col-lg-8::-webkit-scrollbar-thumb {
+  background-color: #adb5bd;
+  border-radius: 8px;
+}
+
+.invoice-show-page .col-lg-8::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* =========================
+   INVOICE SHOW — FIX
+========================= */
+
+.invoice-show-page .invoice-show-card,
+.invoice-show-page .invoice-show-card .card-body {
+  background-color: transparent;
+  border: none;
+}
+
+/* =========================
+   INVOICE DETAILS
+========================= */
+
+.invoice-details p {
+  margin-bottom: 1.25rem;
+}
+
+/* Labels */
+.invoice-details p strong {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  opacity: .7;
+  margin-bottom: 4px;
+}
+
+/* Valores */
+.invoice-details p span {
+  font-size: 1rem;
+  display: block;
+}
+
+/* Valor principal */
+.invoice-details .invoice-amount {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
 /* Tables style */
 
 /* =========================

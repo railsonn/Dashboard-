@@ -1,50 +1,66 @@
-<%= form_with(model: invoice) do |form| %>
-  <% if invoice.errors.any? %>
-    <div style="color: red">
-      <h2>
-        <%= t(
-              "invoices.form.errors_title",
-              count: invoice.errors.count
-            ) %>
-      </h2>
+<div class="invoice-edit-page">
+  <div class="card edit-account-card">
+    <div class="card-body">
 
-      <ul>
-        <% invoice.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+      <%= form_with(model: invoice) do |form| %>
+
+        <% if invoice.errors.any? %>
+          <div class="alert alert-danger mb-4">
+            <h5 class="mb-2">
+              <%= t("invoices.form.errors_title", count: invoice.errors.count) %>
+            </h5>
+
+            <ul class="mb-0">
+              <% invoice.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+              <% end %>
+            </ul>
+          </div>
         <% end %>
-      </ul>
+
+        <div class="row g-4">
+
+          <div class="col-md-6">
+            <%= form.label :total_amount,
+                  t("invoices.attributes.total_amount"),
+                  class: "form-label" %>
+            <%= form.text_field :total_amount,
+                  class: "form-control" %>
+          </div>
+
+          <div class="col-md-6">
+            <%= form.label :due_date,
+                  t("invoices.attributes.due_date"),
+                  class: "form-label" %>
+            <%= form.date_field :due_date,
+                  class: "form-control" %>
+          </div>
+
+          <div class="col-md-6">
+            <%= form.label :status,
+                  t("invoices.attributes.status"),
+                  class: "form-label" %>
+            <%= form.text_field :status,
+                  class: "form-control" %>
+          </div>
+
+          <div class="col-md-6">
+            <%= form.label :account_id,
+                  t("invoices.attributes.account"),
+                  class: "form-label" %>
+            <%= form.text_field :account_id,
+                  class: "form-control" %>
+          </div>
+
+        </div>
+
+        <div class="mt-5 d-flex justify-content-end">
+          <%= form.submit t("invoices.form.submit"),
+                class: "btn btn-primary px-4" %>
+        </div>
+
+      <% end %>
+
     </div>
-  <% end %>
-
-  <div>
-    <%= form.label :total_amount,
-          t("invoices.attributes.total_amount"),
-          style: "display: block" %>
-    <%= form.text_field :total_amount %>
   </div>
-
-  <div>
-    <%= form.label :due_date,
-          t("invoices.attributes.due_date"),
-          style: "display: block" %>
-    <%= form.date_field :due_date %>
-  </div>
-
-  <div>
-    <%= form.label :status,
-          t("invoices.attributes.status"),
-          style: "display: block" %>
-    <%= form.text_field :status %>
-  </div>
-
-  <div>
-    <%= form.label :account_id,
-          t("invoices.attributes.account"),
-          style: "display: block" %>
-    <%= form.text_field :account_id %>
-  </div>
-
-  <div>
-    <%= form.submit t("invoices.form.submit") %>
-  </div>
-<% end %>
+</div>

@@ -1,12 +1,26 @@
 <% content_for :title, t("invoices.edit.title") %>
 
-<h1><%= t("invoices.edit.heading") %></h1>
+<div class="container-fluid py-4 <%= @theme %>-settings invoice-edit-page">
+  <div class="row">
+    <div class="col-lg-8 col-xl-6">
 
-<%= render "form", invoice: @invoice %>
+      <h4 id="invoice-edit-title">
+        <%= t("invoices.edit.heading") %>
+      </h4>
 
-<br>
+      <div class="card shadow-sm invoice-edit-card">
+        <div class="card-body">
 
-<div>
-  <%= link_to t("invoices.edit.show"), @invoice %> |
-  <%= link_to t("invoices.edit.back"), invoices_path %>
+          <%= render "form", invoice: @invoice %>
+
+          <div class="d-flex gap-2 mt-4">
+            <%= link_to t("invoices.edit.show"), @invoice, class: "btn btn-outline-primary btn-sm" %>
+            <%= link_to t("invoices.edit.back"), invoices_path, class: "btn btn-outline-secondary btn-sm" %>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>

@@ -1,10 +1,45 @@
-<p style="color: green"><%= notice %></p>
+<div class="container-fluid py-4 <%= @theme %>-settings invoice-show-page">
+  <div class="row">
+    <div class="col-lg-8 col-xl-6">
 
-<%= render @invoice %>
+      <% if notice.present? %>
+        <div class="alert alert-success py-2 px-3 mb-3">
+          <%= notice %>
+        </div>
+      <% end %>
 
-<div>
-  <%= link_to t("invoices.show.edit"), edit_invoice_path(@invoice) %> |
-  <%= link_to t("invoices.show.back"), invoices_path %>
+      <h4 id="invoice-show-title">
+        <%= t("invoices.show.title", default: "Invoice details") %>
+      </h4>
 
-  <%= button_to t("invoices.show.destroy"), @invoice, method: :delete %>
+      <div class="card shadow-sm invoice-show-card">
+        <div class="card-body">
+
+          <div class="invoice-details">
+            <%= render @invoice %>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mt-4">
+            <div class="d-flex gap-3">
+              <%= link_to t("invoices.show.edit"),
+                    edit_invoice_path(@invoice),
+                    class: "btn btn-outline-primary px-4" %>
+
+              <%= link_to t("invoices.show.back"),
+                    invoices_path,
+                    class: "btn btn-outline-secondary px-4" %>
+            </div>
+
+            <%= link_to t("invoices.show.destroy"),
+                  invoice_path(@invoice),
+                  data: { turbo_method: :delete, turbo_confirm: t("invoices.show.confirm", default: "Are you sure?") },
+                  class: "btn btn-outline-danger px-4" %>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>

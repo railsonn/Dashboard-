@@ -1,21 +1,29 @@
-<div id="<%= dom_id invoice %>">
+<div id="<%= dom_id invoice %>" class="invoice-details">
   <p>
-    <strong><%= t("invoices.show.total_amount") %>:</strong>
-    <%= invoice.total_amount %>
+    <strong><%= t("invoices.show.total_amount") %></strong>
+    <span class="invoice-amount">
+      <%= number_to_currency(invoice.total_amount) %>
+    </span>
   </p>
 
   <p>
-    <strong><%= t("invoices.show.due_date") %>:</strong>
-    <%= invoice.due_date %>
+    <strong><%= t("invoices.show.due_date") %></strong>
+    <span>
+      <%= t(invoice.due_date) %>
+    </span>
   </p>
 
   <p>
-    <strong><%= t("invoices.show.status") %>:</strong>
-    <%= invoice.status %>
+    <strong><%= t("invoices.show.status") %></strong>
+    <span class="invoice-status">
+      <%= invoice.status %>
+    </span>
   </p>
 
   <p>
-    <strong><%= t("invoices.show.account") %>:</strong>
-    <%= invoice.account_id %>
+    <strong><%= t("invoices.show.account") %></strong>
+    <span>
+      <%= invoice.account_id %>
+    </span>
   </p>
 </div>
