@@ -1,9 +1,9 @@
 module ApplicationHelper
   def nav_active(path)
-    current_page?(path) ? "active" : ""
-  end
-
-  def check(theme)
-    puts "#{theme} =================================================="
+    if path.include?(controller_name)
+      "active"
+    else 
+      ""
+    end
   end
 end
