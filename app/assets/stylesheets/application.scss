@@ -482,12 +482,17 @@ body {
 
 /* Card herda o fundo do container pai */
 .light-settings .budget-show-page .account-show-card,
-.light-settings .budget-show-page .account-show-card .card-body,
+.light-settings .budget-show-page .account-show-card .card-body {
+  background-color: #fff;
+  border: none;
+}
+
+
 .dark-settings .budget-show-page .account-show-card,
 .dark-settings .budget-show-page .account-show-card .card-body {
   background-color: #0D1B2A;
-  border: none;
 }
+
 
 /* =========================
    TÍTULO (igual account show)
